@@ -31,7 +31,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Build site-builder
       - name: Run site-builder
         run: cd site-build && cargo run && cd ..
       - name: Setup Pages
