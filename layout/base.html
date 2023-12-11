@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<base href="{{ base-path }}" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWEnergy</title>
+    <link rel="stylesheet" href="style.css">    
+    <link rel="icon" type="image/png" href="img/icona.png">
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="logo">
+                <img src="img/logo.png" alt="Logo del sito">
+            </div>
+            <ul>
+                <li><a href="workshop/index.html">Workshop</a></li>
+                <li><a href="#candidatura">Candidatura  </a></li>
+                <li><a href="#chisiamo">Chi siamo  </a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+		<section>
+		{{ content }}
+		</section>
+	</main>
+</body>
+</html>

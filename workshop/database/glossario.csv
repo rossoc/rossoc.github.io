@@ -1,0 +1,11 @@
+termine,definizione
+cliente,utente che può prenorasi in un ristorante e può effettuare un ordine
+ristoratore,utente che gestisce un ristorante
+ristorante,luogo dove un cliente può prenotarsi e può effettuare un ordine
+prenotazione,data e ora e numero di persone
+menu,lista di piatti che un ristoratore offre ai clienti
+ordinazione,lista di piatti ordinati da un cliente
+piatto,alimento che può essere ordinato da un cliente
+ingrediente,alimento che può essere contenuto in un piatto
+allergene,ingrediente che può causare allergie
+cucina,tipologia di piatti che un ristoratore offre ai clienti
