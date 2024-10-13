@@ -1,0 +1,51 @@
+:root {
+    --decorations-width: 14px;
+}
+
+hr {
+    margin-top: 50vw;
+}
+
+.clickable-area {
+	position: fixed;
+	z-index: 100;
+	background-color: var(--oneColor);
+	border-radius: 10px;
+}
+
+.clickable-area:hover {
+	background-color: var(--twoColor);
+}
+
+#top {
+	top: 5px;
+	left: 10%;
+	width: 80%;
+	height: var(--decorations-width);
+}
+
+#bottom {
+	bottom: 5px;
+	left: 10%;
+	width: 80%;
+	height: var(--decorations-width);
+}
+
+body main { /* // *:not(hr, h1, h2, h3, h4) { */
+    max-width: var(--content);
+    margin: 0 auto;
+    font-size: 2rem;
+}
+
+img, video {
+    box-shadow: none;
+    border-radius: 0;
+}
+
+table {
+    margin: 3rem auto;
+}
+
+body {
+    margin-bottom: 50vw;
+}

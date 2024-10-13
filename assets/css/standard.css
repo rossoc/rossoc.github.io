@@ -1,0 +1,397 @@
+:root {
+    --backgroundColor: #EDE3E4;
+    --textColor: #333;
+    --oneColor: #691B25;
+    --twoColor: #608F3B;
+}
+
+:root {
+    --round-radius: 1rem;
+    --border: solid var(--oneColor);
+    --shadow: 0 0 0.4rem 0.01rem var(--oneColor);
+
+}
+
+/* --------- MOBILE BREAKPOINT --------- */
+
+@media screen and (max-width: 700px) {
+    :root {
+        --textSize: 1.2rem;
+        --heading1Size: 2rem;
+        --heading2Size: 1.4rem;
+        --heading3Size: 1.3rem;
+        --heading4Size: 1.2rem;
+        --shortContent: 100%;
+        --content: 100%;
+    }
+}
+
+/* --------- TABLET BREAKPOINT --------- */
+
+@media screen and (min-width: 701px) and (max-width: 900px) {
+    :root {
+        --textSize: 1.5rem;
+        --heading1Size: 2.5rem;
+        --heading2Size: 2rem;
+        --heading3Size: 1.8rem;
+        --heading4Size: 1.6rem;
+        --shortContent: 55%;
+        --content: 90%;
+    }
+}
+
+/* --------- LAPTOP BREAKPOINT --------- */
+
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+    :root {
+        --textSize: 1.8rem;
+        --heading1Size: 3rem;
+        --heading2Size: 2.2rem;
+        --heading3Size: 2rem;
+        --heading4Size: 1.9rem;
+        --shortContent: 42%;
+        --content: 80%;
+    }
+}
+
+/* --------- BIG SCREEN BREAKPOINT --------- */
+
+@media screen and (min-width: 1201px) {
+    :root {
+        --textSize: 2rem;
+        --heading1Size: 3.5rem;
+        --heading2Size: 2.5rem;
+        --heading3Size: 2.3rem;
+        --heading4Size: 2.1rem;
+        --shortContent: 36%;
+        --content: 70%;
+    }
+}
+
+/* Tipografia */
+
+* {
+    box-sizing: border-box;
+    line-height: calc(1.3 * var(--textSize));
+	font-family: 'Roboto', sans-serif;
+}
+
+*:not(html, body, footer, header, main) {
+    max-width: 1200px;
+}
+
+h1 {
+    line-height: calc(1.5 * var(--heading1Size));
+    color: var(--oneColor);
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: var(--heading1Size);
+}
+
+h2 {
+    line-height: calc(1.5 * var(--heading2Size));
+    color: var(--oneColor);
+    margin-bottom: 1rem;
+    font-size: var(--heading2Size);
+    text-align: center;
+}
+
+h3 {
+    line-height: calc(1.5 * var(--heading3Size));
+    color: var(--oneColor);
+    margin-bottom: 1rem;
+    font-size: var(--heading3Size);
+}
+
+h4 {
+    line-height: calc(1.5 * var(--heading4Size));
+    color: var(--oneColor);
+    margin-bottom: 1rem;
+    font-size: var(--heading4Size);
+}
+
+a {
+    color: var(--twoColor);
+    border-radius: var(--round-radius);
+}
+
+a:visited {
+    color: var(--oneColor);
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    margin: 0 auto;
+    padding: var(--heading1Size);
+    max-width: var(--content);
+    background-color: var(--backgroundColor);
+    border-radius: var(--round-radius);
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--oneColor);
+    color: var(--backgroundColor);
+    padding: 1rem;
+    text-align: center;
+}
+
+header > * {
+    margin: 0 auto;
+}
+
+header a {
+    color: var(--backgroundColor);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 150%;
+}
+
+header a:visited {
+    color: var(--backgroundColor);
+}
+
+#navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 1rem auto;
+    flex-wrap: wrap;
+}
+
+#navbar a {
+    padding: 0.5rem;
+}
+
+table {
+    margin: 0 auto;
+	border:thin solid var(--textColor);
+	border-collapse:collapse;
+	padding:0.4rem;
+    width: 100%;
+}
+
+table th {
+    padding: 0.8rem;
+    background-color: var(--oneColor);
+    color: var(--backgroundColor);
+    font-weight: bold;
+}
+
+table td {
+    padding: 0.8rem;
+    border-bottom: 0.1rem solid var(--textColor);
+    border-right: 0.1rem solid var(--textColor);
+}
+
+table th:last-of-type, table td:last-of-type {
+    border-right: none;
+}
+
+table tr:last-of-type td {
+    border-bottom: none;
+}
+
+table tr:nth-of-type(even) {
+    background-color: rgba(var(--threeColor-rgb), 1);
+}
+
+table td a {
+    padding: 0.3rem;
+}
+
+p:has(img) {
+    text-align: center;
+}
+
+img, video {
+    max-width: var(--content);
+    height: auto;
+    margin: 0.5rem;
+    border-radius: var(--round-radius);
+    box-shadow: var(--shadow);
+}
+
+@media screen and (max-width: 600px) {
+    table th, table td {
+        padding: 0.5rem 0.1rem;
+    }
+
+    table th:first-of-type, table td:first-of-type {
+        display: none;
+    }
+}
+
+hr {
+  border: none; /* Rimuovi il bordo predefinito */
+  height: 0.1rem; /* Imposta l'altezza della linea */
+  background-color: var(--oneColor); /* Colore di sfondo della linea */
+  margin: 2rem 2rem; /* Spazio sopra e sotto la linea */
+}
+
+/* Home */
+
+#home-pic {
+    width: var(--shortContent);
+    margin: 0 auto;
+    height: auto;
+    border-radius: var(--round-radius);
+    box-shadow: var(--shadow);
+}
+
+#home-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin: 2rem auto;
+    padding: 0;
+}
+
+#home-links li {
+    display: block;
+    width: 100%;
+}
+
+#home-links li a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    font-size: 150%;
+    color: var(--oneColor);
+    padding: 0.8rem;
+    border: 0.1rem solid var(--oneColor);
+    border-radius: var(--round-radius);
+    transition: all 0.3s;
+    font-weight: bold;
+    text-align: center;
+}
+
+#home-links li a:hover {
+    background-color: var(--oneColor);
+    color: var(--backgroundColor);
+}
+
+/* Collection page */
+
+#link-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 150%;
+    margin: 2rem auto;
+}
+
+#link-list li a {
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+/* Checkbox */
+
+li:has(input[type=checkbox]) {
+    list-style: none;
+}
+
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+    input[type=checkbox] {
+        --active: var(--oneColor);
+        --active-inner: var(--backgroundColor);
+        --border: var(--oneColor);
+        --background: var(--backgroundColor);
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        top: 0.55rem;
+        height: 1.4rem;
+        outline: none;
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        margin: 0;
+        cursor: pointer;
+        border: 0.08rem solid var(--bc, var(--border));
+        background: var(--b, var(--background));
+        transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+    }
+
+    input[type=checkbox]:after {
+        content: "";
+        display: block;
+        left: 0;
+        top: 0;
+        position: absolute;
+        transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+    }
+
+    input[type=checkbox]:checked {
+        --b: var(--active);
+        --bc: var(--active);
+        --d-o: .3s;
+        --d-t: .6s;
+        --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+    }
+
+    input[type=checkbox]:disabled {
+        cursor: not-allowed;
+    }
+
+    input[type=checkbox]:disabled+label {
+        cursor: not-allowed;
+    }
+
+    input[type=checkbox]:hover:not(:checked):not(:disabled) {
+        --bc: var(--border-hover);
+    }
+
+    input[type=checkbox]:not(.switch) {
+        width: 1.4rem;
+        border-radius: 0.4rem;
+    }
+
+    input[type=checkbox]:not(.switch):after {
+        width: 5px;
+        height: 9px;
+        border: 2px solid var(--active-inner);
+        border-top: 0;
+        border-left: 0;
+        left: 7px;
+        top: 4px;
+        transform: rotate(var(--r, 20deg));
+        opacity: var(--o, 0);
+    }
+
+    input[type=checkbox]:checked {
+        --r: 43deg;
+        --o: 1;
+    }
+}
+
+/* --------- Blockquote --------- */
+
+blockquote {
+    margin: 0;
+    padding: 0 0.5rem;
+    border-left: 0.5rem solid var(--oneColor);
+    background-color: var(--backgroundColor);
+    font-style: italic;
+}
+
+blockquote p {
+    margin: 0;
+}
