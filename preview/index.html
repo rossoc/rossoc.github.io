@@ -6,8 +6,17 @@
     <title>Preview</title>
     <base href="../">
     <link rel="stylesheet" type="text/css" href="assets/css/standard.css">
-    <script type="text/javascript" async=""
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+        integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"
+        integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg"
+        crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+        integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/math-render.js"></script>
+
     <script src="assets/js/dark-mode.js"></script>
 </head>
 
@@ -16,8 +25,7 @@
     <nav id="navbar">
         <ul>
             <li><a href="">Home</a></li>
-            <li><a href="preview">Preview</a></li>
-            <li><a href="preview/thesis.html">Tesi</a></li>
+            <li><a href="preview/notes.html">Notes</a></li>
         </ul>
     </nav>
 </header>
@@ -25,13 +33,20 @@
 
     <main>
         <h1> Preview </h1>
-        <ul id="link-list">
+        <ul class="link-list">
+    <li> <a href="../todo">Todo!</a> </li>
+</ul>
+
+        <ul class="link-list">
             <li><a href="preview/thesis.html">Comparison of Kernel Methods and Large Language Models in Sentiment Analysis </a></li>
+<li><a href="preview/notes.html">Notes </a></li>
+<li><a href="preview/about_me.html">Let's Connect </a></li>
 
         </ul>
-    </main>
-    <footer>
-    </footer>
+    </main><footer>
+    <p>&copy; 2024 danesinoo. All Rights Reserved.</p>
+</footer>
+
 </body>
 
 </html>

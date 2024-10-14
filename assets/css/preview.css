@@ -46,6 +46,10 @@ table {
     margin: 3rem auto;
 }
 
-body {
-    margin-bottom: 50vw;
+main {
+    padding-bottom: 50vw;
+}
+
+ul li, ol li {
+    line-height: 180%;
 }

@@ -69,6 +69,7 @@ class Hr {
 
 document.addEventListener('DOMContentLoaded', function() {
     var hr = new Hr();
+    hr.update();
 
     document.getElementById('top').addEventListener('click', function() {
         hr.focus_previous()

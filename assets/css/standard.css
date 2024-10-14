@@ -141,6 +141,14 @@ body {
     margin: 0;
 }
 
+footer {
+    text-align: center;
+}
+
+footer > * {
+    margin: 0 auto;
+}
+
 main {
     margin: 0 auto;
     padding: var(--heading1Size);
@@ -149,6 +157,7 @@ main {
     border-radius: var(--round-radius);
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -166,7 +175,7 @@ header a {
     color: var(--backgroundColor);
     font-weight: bold;
     text-decoration: none;
-    font-size: 150%;
+    font-size: 200%;
 }
 
 header a:visited {
@@ -298,18 +307,17 @@ hr {
 
 /* Collection page */
 
-#link-list {
+.link-list, .note-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 1rem;
     flex-direction: column;
     font-weight: bold;
     font-size: 150%;
-    margin: 2rem auto;
+    margin: 0rem 2rem 0 2rem;
 }
 
-#link-list li a {
+.link-list li a, .note-list li a {
     text-decoration: none;
     padding: 0.5rem;
 }
