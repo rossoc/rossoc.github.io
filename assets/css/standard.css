@@ -1,8 +1,19 @@
-:root {
-    --backgroundColor: #EDE3E4;
-    --textColor: #333;
-    --oneColor: #691B25;
-    --twoColor: #608F3B;
+@media (prefers-color-scheme: light) {
+    :root {
+        --backgroundColor: #EDE3E4;
+        --textColor: #333;
+        --oneColor: #691B25;
+        --twoColor: #608F3B;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --backgroundColor: #24283b;
+        --textColor: #a9b1d6;
+        --oneColor: #bb9af7;
+        --twoColor: #ff862a;
+    }
 }
 
 :root {
