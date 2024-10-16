@@ -66,6 +66,8 @@ class Hr {
     }
 }
 
+var back_to_top = false;
+
 document.addEventListener('DOMContentLoaded', function() {
     var hr = new Hr();
     hr.update();
@@ -101,7 +103,29 @@ document.addEventListener('DOMContentLoaded', function() {
             case 'ArrowUp':
                 hr.focus_previous()
                 break;
+            case 'g':
+                if (back_to_top) {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    })
+                } else {
+                    back_to_top = true;
+                    setTimeout(function() {
+                        back_to_top = false;
+                    }, 1000)
+                }
+                break
+            case 'G':
+                window.scrollTo({
+                    top: document.body.scrollHeight,
+                    behavior: 'smooth'
+                })
+                break
         }
 
+        if (event.key !== 'g') {
+            back_to_top = false;
+        }
     })
 })
