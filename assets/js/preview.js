@@ -46,7 +46,6 @@ class Hr {
     focus(elm) {
         let hrPosition = elm.getBoundingClientRect().top + window.scrollY;
         let offsetPosition = hrPosition + elm.offsetHeight;
-        this.update(offsetPosition - window.scrollY);
 
         window.scrollTo({
             top: offsetPosition,
@@ -70,6 +69,10 @@ class Hr {
 document.addEventListener('DOMContentLoaded', function() {
     var hr = new Hr();
     hr.update();
+
+    window.addEventListener('scroll', function(_) {
+        hr.update()
+    })
 
     document.getElementById('top').addEventListener('click', function() {
         hr.focus_previous()
