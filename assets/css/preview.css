@@ -53,3 +53,7 @@ main {
 ul li, ol li {
     line-height: 180%;
 }
+
+#home-links {
+    margin-top: 10vw;
+}

@@ -20,6 +20,7 @@
     --round-radius: 1rem;
     --border: solid var(--oneColor);
     --shadow: 0 0 0.4rem 0.01rem var(--oneColor);
+    --transition: all 0.3s;
 
 }
 
@@ -295,7 +296,7 @@ hr {
     padding: 0.8rem;
     border: 0.1rem solid var(--oneColor);
     border-radius: var(--round-radius);
-    transition: all 0.3s;
+    transition: var(--transition);
     font-weight: bold;
     text-align: center;
 }

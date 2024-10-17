@@ -156,7 +156,7 @@ $$</p>
 <h1>Competition Design to Find Defective Products (24 points)</h1>
 <h2></h2>
 <p>Follows the theorem of generalization bound for selection from finite $\mathcal{H}$:</p>
-<p>$$ \mathbb{P}(L(\hat{h}^<em>_S) \leq \hat{L}(\hat{h}^</em>_S, S) + \sqrt{\frac{\ln(M / \delta)}{2n}}) \geq 1 - \delta $$</p>
+<p>$$ \mathbb{P}(L(\hat{h}^\star_S) \leq \hat{L}(\hat{h}^\star_S, S) + \sqrt{\frac{\ln(M / \delta)}{2n}}) \geq 1 - \delta $$</p>
 <p>Let's repeat our hypothesis:</p>
 <p>$$ M = 20 $$</p>
 <p>$$ \delta = 2 $$</p>
@@ -189,19 +189,32 @@ $$</p>
 <h2>Neural Network with Early Stopping (21 points)</h2>
 <p>Statistical bias, in the mathematical field of statistics, is a systematic tendency in which the methods used to gather data and generate statistics present an inaccurate, skewed, or biased depiction of reality. — [Wikipedia@bias]</p>
 <h3>Predefined Stopping</h3>
-<p>The $S_{\text{val}}$ has no influence on the choice of the target function $h_{t^*}$, so the bias is not present.</p>
+<p>The $S_{\text{val}}$ has no influence on the choice of the target function $h_{t^\star}$, so the bias is not present.</p>
 <h3>Non-adaptive Stopping</h3>
-<p>The target function $h_{t^<em>}$ that minimizes the validation error $\hat{L}(h_{t^</em>})$ is chosen. Therefore, the dataset is used to choose the best target function, which leads the final model to be biased by the validation set $S_{\text{val}}$.</p>
+<p>The target function $ h_{t^\star} $ that minimizes the validation error 
+$ \hat{L} (h_{t^\star}) $ is chosen. Therefore, the dataset is used to choose the 
+best target function, which leads the final model to be biased by the validation 
+set $S_{\text{val}}$.</p>
 <h3>Adaptive Stopping</h3>
-<p>$h_{t^*}$ is chosen from the sequence of hypotheses $h_1, h_2, h_3, \dots, h_t$. While the target function is not chosen based on the validation set, the sequence stops when the validation does not improve for a certain number of steps. Therefore, the sequence of models is biased by the validation set $S_{\text{val}}$. As a counterexample to the claim that the bias is not present, let's consider the case in which a different validation set $S'<em>{\text{val}}$ is used. Then, it would produce the sequence of hypothesis models $h_1, h_2, h_3, \dots, h_j$, and $j \neq t$. Let $j &gt; t$ and $h_j$ be the best model, thus the final model choice differs from the one obtained with the original validation set $S</em>{\text{val}}$. Therefore, we can conclude that the final model is biased by the validation set $S_{\text{val}}$.</p>
+<p>$h_{t^\star}$ is chosen from the sequence of hypotheses $h_1, h_2, h_3, \dots, 
+h_t$. While the target function is not chosen based on the validation set, the 
+sequence stops when the validation does not improve for a certain number of 
+steps. Therefore, the sequence of models is biased by the validation set 
+$S_{\text{val}}$. As a counterexample to the claim that the bias is not present, 
+let's consider the case in which a different validation set $S_{\text{val}}'$ 
+is used. Then, it would produce the sequence of hypothesis models $h_1, h_2, 
+h_3, \dots, h_j$, and $j \neq t$. Let $j &gt; t$ and $h_j$ be the best model, thus 
+the final model choice differs from the one obtained with the original 
+validation set $S_{\text{val}}$. Therefore, we can conclude that the final 
+model is biased by the validation set $S_{\text{val}}$.</p>
 <h2></h2>
 <p>I have already cited the theorem of generalization bound (see @hp-bound), so follows the solution for the two cases.</p>
 <h3>Predefined Stopping</h3>
 <p>We have $M = 1$, because we are only considering the final model:</p>
-<p>$$ \mathbb{P}(L(\hat{h}^<em>_S) \leq \hat{L}(\hat{h}^</em>_S, S) + \sqrt{\frac{\ln(1 / \delta)}{2n}}) \geq 1 - \delta $$</p>
+<p>$$ \mathbb{P}(L(\hat{h}^\star_S) \leq \hat{L}(\hat{h}^\star_S, S) + \sqrt{\frac{\ln(1 / \delta)}{2n}}) \geq 1 - \delta $$</p>
 <h3>Non-adaptive Stopping</h3>
 <p>We have $M = T$, where $T$ is the number of epochs and thus the number of models to consider:</p>
-<p>$$ \mathbb{P}(L(\hat{h}^<em>_S) \leq \hat{L}(\hat{h}^</em>_S, S) + \sqrt{\frac{\ln(T / \delta)}{2n}}) \geq 1 - \delta $$</p>
+<p>$$ \mathbb{P}(L(\hat{h}^\star_S) \leq \hat{L}(\hat{h}^\star_S, S) + \sqrt{\frac{\ln(T / \delta)}{2n}}) \geq 1 - \delta $$</p>
 
     </main><footer>
     <p>&copy; 2024 danesinoo. All Rights Reserved.</p>
