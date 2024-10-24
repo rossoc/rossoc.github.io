@@ -1,6 +1,7 @@
 @media (prefers-color-scheme: light) {
     :root {
         --backgroundColor: #EDE3E4;
+        --backgroundColorHighlight: #D5CCCD;
         --textColor: #333;
         --oneColor: #691B25;
         --twoColor: #608F3B;
@@ -10,6 +11,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --backgroundColor: #24283b;
+        --backgroundColorHighlight: #2E334B;
         --textColor: #a9b1d6;
         --oneColor: #ff862a;
         --twoColor: #bb9af7;
@@ -410,6 +412,8 @@ blockquote {
     border-left: 0.5rem solid var(--oneColor);
     background-color: var(--backgroundColor);
     font-style: italic;
+    border-radius: var(--round-radius);
+    background-color: var(--backgroundColorHighlight);
 }
 
 blockquote p {
