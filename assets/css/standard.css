@@ -242,7 +242,7 @@ p:has(img) {
 img, video {
     max-width: var(--content);
     height: auto;
-    margin: 0.5rem;
+    margin: 0.5rem auto;
     border-radius: var(--round-radius);
     box-shadow: var(--shadow);
 }
