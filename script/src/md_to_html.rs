@@ -17,12 +17,9 @@
 //! └── ...
 //! ```
 use pulldown_cmark::{html, Options, Parser};
-use rayon::prelude::*;
 use std::collections::HashMap;
 use std::fs;
 use std::path::PathBuf;
-
-extern crate rayon;
 
 pub const IGNORE_FOLDERS: [&str; 8] = [
     "layout",
@@ -74,7 +71,8 @@ pub fn md_to_html(src: &str, out: &str) -> Result<(), std::io::Error> {
     let folders = get_folders(&PathBuf::from(src));
 
     folders
-        .par_iter()
+        // .par_iter()
+        .iter()
         .map(|folder| {
             // create the folder in the destination directory
             let mut d = PathBuf::from(out);
