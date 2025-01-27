@@ -321,6 +321,7 @@ $$ \mathbb{P}(L(\hat{h}^\star_S) \leq \hat{L}(\hat{h}^\star_S, S) + \sqrt{\frac{
 
 We have $M = T$, where $T$ is the number of epochs and thus the number of models to consider:
 
+
 $$ \mathbb{P}(L(\hat{h}^\star_S) \leq \hat{L}(\hat{h}^\star_S, S) + \sqrt{\frac{\ln(T / \delta)}{2n}}) \geq 1 - \delta $$
 
 
