@@ -24,9 +24,8 @@ use std::path::PathBuf;
 
 extern crate rayon;
 
-pub const IGNORE_FOLDERS: [&str; 9] = [
+pub const IGNORE_FOLDERS: [&str; 8] = [
     "layout",
-    "assets",
     "target",
     "src",
     ".git",
