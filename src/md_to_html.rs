@@ -21,7 +21,7 @@ use std::collections::HashMap;
 use std::fs;
 use std::path::PathBuf;
 
-pub const IGNORE_FOLDERS: [&str; 8] = [
+pub const IGNORE_FOLDERS: [&str; 9] = [
     "layout",
     "target",
     "src",
@@ -30,6 +30,7 @@ pub const IGNORE_FOLDERS: [&str; 8] = [
     ".obsidian",
     "script",
     "_site",
+    ".gitignore",
 ];
 
 const IGNORE_FILES: [&str; 1] = ["README.md"]; // only .md files are converted

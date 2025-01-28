@@ -30,7 +30,7 @@ jobs:
         - name: Setup Pages
           uses: actions/configure-pages@v4
         - name: Build html
-          run: cd script && cargo run && cd ..
+          run: cargo run
         - name: Upload artifact
           uses: actions/upload-pages-artifact@v2
           with:

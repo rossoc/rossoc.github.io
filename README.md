@@ -1,4 +1,4 @@
-# Website
+# Notes
 
 This program is meant to convert .md files into .html.  
 It is strongly inspired by [Jekyll](https://jekyllrb.com/), I mostly copied it,

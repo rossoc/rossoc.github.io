@@ -23,15 +23,21 @@
 //! ## Idee
 //! - usare axum per creare un server che serve i file html (molto simile a actix-web)
 
+mod file_walker;
 mod md_to_html;
 use chrono::Local;
+use file_walker::files;
 use md_to_html::{md_to_html, IGNORE_FOLDERS};
 use std::fs;
 use std::path::PathBuf;
 
 fn main() -> Result<(), std::io::Error> {
-    let target = "../";
-    let dest = "../_site/";
+    let target = "./";
+    let dest = "./_site/";
+
+    files(&PathBuf::from(target))
+        .iter()
+        .for_each(|e| println!("{:?}", e));
 
     copy_dir_all(&PathBuf::from(target), &PathBuf::from(dest))?;
 
