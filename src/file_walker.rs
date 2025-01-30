@@ -1,9 +1,24 @@
-use std::fs::{read_dir, ReadDir};
-use std::io::Result;
-use std::path::{Path, PathBuf};
+use crate::error::Error;
+use std::fs::{copy, create_dir_all, read_dir, read_to_string};
+use std::iter::once;
+use std::path::PathBuf;
 
-fn ignore_files() -> Vec<String> {
-    [
+pub fn file_name(dir: &PathBuf) -> String {
+    match dir.file_name() {
+        Some(name) => path_to_str(&name.into()),
+        None => "".to_string(),
+    }
+}
+
+pub fn path_to_str(dir: &PathBuf) -> String {
+    match dir.to_str() {
+        Some(res) => res.to_string(),
+        None => "".to_string(),
+    }
+}
+
+pub fn should_include(path: &PathBuf) -> bool {
+    let ignoring = [
         "layout",
         "target",
         "src",
@@ -16,37 +31,69 @@ fn ignore_files() -> Vec<String> {
     ]
     .iter()
     .map(|e| e.to_string())
-    .collect::<_>()
+    .collect::<Vec<_>>();
+
+    !ignoring.contains(&file_name(&path))
 }
 
-/// Given a directory, returns the files in such directory and all
-/// sub-directories recursively. Directories are considered files themselves.
-/// Files returned by `ignore_files()` are ignored.
+/// Given a directory, returns such directory and all
+/// sub-directories recursively. Files returned by `ignore_files()` are ignored.
 ///
 /// Input:
 /// - source_dir: the source directory to start the recursion
-pub fn files(source_dir: &Path) -> Result<Vec<PathBuf>> {
+pub fn dirs_walker(source_dir: &PathBuf) -> Result<Vec<PathBuf>, Error> {
+    let src = PathBuf::from(source_dir);
+    src.canonicalize()?;
     let res = read_dir(source_dir)?
         .filter_map(|e| e.ok())
         .filter_map(|e| e.path().canonicalize().ok())
-        .filter(|e| match e.file_name() {
-            Some(f) => match f.to_str() {
-                Some(name) => !ignore_files().contains(&name.to_string()),
-                None => false,
-            },
-            None => false,
-        })
-        .map(|e| match e.is_dir() {
-            true => match files(&e) {
-                Ok(mut res) => {
-                    res.push(e);
-                    res
-                }
-                Err(_) => vec![e],
-            },
-            false => vec![e],
-        })
+        .filter(|e| should_include(e))
+        .filter_map(|e| dirs_walker(&e).ok())
         .flatten()
-        .collect::<_>();
+        .chain(once(src.canonicalize()?))
+        .collect();
     Ok(res)
+}
+
+// Return the list of files contained in the source folder
+pub fn files_walker(source_folder: &PathBuf) -> Result<Vec<PathBuf>, Error> {
+    let walker = read_dir(source_folder)?
+        .filter_map(|entry| entry.ok())
+        .filter(|entry| entry.path().is_file())
+        .map(|entry| entry.path())
+        .collect::<Vec<PathBuf>>();
+    Ok(walker)
+}
+
+/// Given the name of a layout (template), it returns the content.
+pub fn read_layout(name: &str) -> Result<String, Error> {
+    let mut path = PathBuf::from("layout");
+    path.canonicalize()?;
+    path = path.join(name.to_string() + ".html");
+    Ok(read_to_string(path)?)
+}
+
+pub fn copy_dir_all(src: &PathBuf, dst: &PathBuf) -> Result<(), std::io::Error> {
+    if !should_include(src) {
+        return Ok(());
+    }
+
+    if !dst.exists() {
+        create_dir_all(dst)?;
+    }
+
+    for entry in read_dir(src)? {
+        let entry = entry?;
+        let ty = entry.file_type()?;
+        let src_path = entry.path();
+        let dst_path = dst.join(entry.file_name());
+
+        if ty.is_dir() {
+            copy_dir_all(&src_path, &dst_path)?;
+        } else {
+            copy(&src_path, &dst_path)?;
+        }
+    }
+
+    Ok(())
 }
