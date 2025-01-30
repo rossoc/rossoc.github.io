@@ -3,6 +3,7 @@ use std::fs::{copy, create_dir_all, read_dir, read_to_string};
 use std::iter::once;
 use std::path::PathBuf;
 
+/// Gets the file_name of the path and returns it as string
 pub fn file_name(dir: &PathBuf) -> String {
     match dir.file_name() {
         Some(name) => path_to_str(&name.into()),
@@ -10,6 +11,7 @@ pub fn file_name(dir: &PathBuf) -> String {
     }
 }
 
+/// Convert a path to string, very similar to debug
 pub fn path_to_str(dir: &PathBuf) -> String {
     match dir.to_str() {
         Some(res) => res.to_string(),
@@ -17,6 +19,8 @@ pub fn path_to_str(dir: &PathBuf) -> String {
     }
 }
 
+/// Given a path, returns a boolean true if such file is to be included, false
+/// otherwise.
 pub fn should_include(path: &PathBuf) -> bool {
     let ignoring = [
         "layout",
@@ -73,6 +77,11 @@ pub fn read_layout(name: &str) -> Result<String, Error> {
     Ok(read_to_string(path)?)
 }
 
+/// Copy all the files in the source directory to the destination.
+///
+/// Input:
+/// - src: source directory
+/// - dst: destination directory
 pub fn copy_dir_all(src: &PathBuf, dst: &PathBuf) -> Result<(), std::io::Error> {
     if !should_include(src) {
         return Ok(());

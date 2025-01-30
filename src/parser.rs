@@ -5,6 +5,12 @@ use std::collections::HashMap;
 use std::fs::{create_dir_all, read_to_string, write};
 use std::path::PathBuf;
 
+/// Given a directory and the source, strip the source and
+/// change the name to match the output name.
+///
+/// In particular if the file is `readme.md` it is converted to `index.html`,
+/// otherwise if the file is a Markdown only the extension is changed to `.html`.
+/// The path returned is relative
 fn compute_out(dir: &PathBuf, src: &PathBuf) -> Result<PathBuf, Error> {
     let mut res = match dir.strip_prefix(src) {
         Ok(res) => res.into(),
@@ -18,6 +24,8 @@ fn compute_out(dir: &PathBuf, src: &PathBuf) -> Result<PathBuf, Error> {
     Ok(res)
 }
 
+/// This function is used to set the placeholder `{{ base-path }}` in each
+/// layout.
 fn compute_base_path(dir: &PathBuf, src: &PathBuf) -> Result<String, Error> {
     match dir.strip_prefix(src) {
         Ok(res) => Ok(res.iter().fold("./".into(), |acc, _| acc + "../")),
@@ -25,6 +33,7 @@ fn compute_base_path(dir: &PathBuf, src: &PathBuf) -> Result<String, Error> {
     }
 }
 
+/// Format a link for the function [`make_links`]
 fn make_link(dir: &(PathBuf, PathBuf)) -> Result<String, Error> {
     let content = read_to_string(dir.0.clone())?;
     let title = match content.lines().find(|s| s.starts_with("title: ")) {
@@ -38,7 +47,8 @@ fn make_link(dir: &(PathBuf, PathBuf)) -> Result<String, Error> {
     ))
 }
 
-/// Generates the list of links of a collection formatted as an HTML list
+/// Generates the list of links of a collection formatted as an HTML list.
+/// It's used to set the placeholder `{{ links }}`.
 fn make_links(links: &Vec<(PathBuf, PathBuf)>) -> String {
     links
         .iter()
@@ -47,22 +57,30 @@ fn make_links(links: &Vec<(PathBuf, PathBuf)>) -> String {
         .fold(String::new(), |acc, link| acc + &link)
 }
 
+/// Given source and destination, and the variables, produces the output HTML
+/// in the specified folder.
+///
+/// Input:
+/// - dirs: a tuple (source, destination)
+/// - vars: HashMap to replace the placeholders `{{ <key> }}`
 pub fn make_page(dirs: (&PathBuf, PathBuf), vars: &HashMap<&str, String>) -> Result<(), Error> {
-    let mut content = read_to_string(&dirs.0)?;
-    content = match to_html(&content, &vars) {
-        Ok(v) => v,
-        Err(Error::MissingLayoutGeneric) => return Err(Error::MissingLayout(path_to_str(dirs.0))),
-        Err(Error::SettingsNotFoundGeneric) => {
-            return Err(Error::SettingsNotFound(path_to_str(dirs.0)))
-        }
-        Err(Error::ContentNotFoundGeneric) => {
-            return Err(Error::ContentNotFound(path_to_str(dirs.0)))
-        }
-        Err(e) => return Err(e),
-    };
-    Ok(write(&dirs.1, content)?)
+    let content = read_to_string(&dirs.0)?;
+    match to_html(&content, &vars) {
+        Ok(content) => Ok(write(&dirs.1, content)?),
+        Err(Error::MissingLayoutGeneric) => Err(Error::MissingLayout(path_to_str(dirs.0))),
+        Err(Error::SettingsNotFoundGeneric) => Err(Error::SettingsNotFound(path_to_str(dirs.0))),
+        Err(Error::ContentNotFoundGeneric) => Err(Error::ContentNotFound(path_to_str(dirs.0))),
+        Err(e) => Err(e),
+    }
 }
 
+/// Given some directories generates all the HTML in a collection.
+/// A collection is made by all the Markdown in the same directory.
+///
+/// Input:
+/// - dir: path to collection's directory in the source
+/// - src: source dir of the site
+/// - out: output dir or the site
 pub fn make_collection(dir: &PathBuf, src: &PathBuf, out: &PathBuf) -> Result<(), Error> {
     let output_dir = compute_out(dir, src)?;
     if !output_dir.exists() {
@@ -104,6 +122,7 @@ pub fn make_collection(dir: &PathBuf, src: &PathBuf, out: &PathBuf) -> Result<()
     Ok(())
 }
 
+/// Given the source and the output directory, generates the HTML.
 pub fn make_site(src: &str, out: &str) -> Result<(), Error> {
     if !PathBuf::from(out).exists() {
         create_dir_all(out)?;

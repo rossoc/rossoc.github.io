@@ -43,7 +43,7 @@ pub fn read_vars(content: &str) -> Result<HashMap<&str, String>, Error> {
 
 /// Given the name of a layout, if it is found, it is built and returned.
 ///
-/// Layout are built accessing the layout content with [`crate::read_layout`].
+/// Layout are built accessing the layout content with [`crate::file_walker::read_layout`].
 /// A layout may includes others with the inclusion statement: `use <layout>`,
 /// so they are composed with each other.
 ///

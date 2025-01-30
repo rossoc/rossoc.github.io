@@ -1,21 +1,28 @@
 //! # Markdown to html
 //!
-//! This program converts a directory of markdown files to html files.
-//! The structure of the directory needs to be the following:
+//! This program converts a directory of Markdown files to HTML files.
+//! The source directory is ignored, so you can have a `readme.md` and an
+//! `index.html`. It recurses in every sub-directory.
+//!
 //! ```markdown
 //! target
 //! ├── folder1
 //! │   ├── file1.md
 //! │   ├── file2.md
-//! │   └── ...
+//! │   └── folder2.md
+//! │       ├── file3.md
+//! │       ├── file4.md
+//! │       └── ...
 //! ├── layout
 //! │   ├── some_layout.md
 //! │   └── ...
 //! ├── assets
-//! │   ├── some_asset.md
+//! │   ├── some_asset.jpg
 //! │   └── ...
 //! └── ...
 //! ```
+//!
+//!
 //!
 //! Once the program is run, it will wait for an event to occur in the target
 //! directory.

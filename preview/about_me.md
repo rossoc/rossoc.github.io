@@ -16,7 +16,7 @@ title: Let's Connect
             <a href="mailto:carlorosso02@gmail.com">📧 Email carlorosso02@gmail.com</a>
         </li>
         <li>
-            <a href="https://www.linkedin.com/in/carlo-rosso-bb8b1820a/">🔗
+            <a href="https://www.linkedin.com/in/carlo-rosso">🔗
             LinkedIn: Carlo Rosso</a>
         </li>
         <li>
