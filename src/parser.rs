@@ -12,16 +12,16 @@ use std::path::PathBuf;
 /// otherwise if the file is a Markdown only the extension is changed to `.html`.
 /// The path returned is relative
 fn compute_out(dir: &PathBuf, src: &PathBuf) -> Result<PathBuf, Error> {
-    let mut res = match dir.strip_prefix(src) {
-        Ok(res) => res.into(),
-        Err(_) => unreachable!(),
-    };
+    let mut res = dir.clone();
     if file_name(&res).to_lowercase() == "readme.md" {
         res.set_file_name("index.html")
     } else if res.extension().is_some_and(|ext| ext == "md") {
         res.set_extension("html");
     }
-    Ok(res)
+    match res.strip_prefix(src) {
+        Ok(res) => Ok(res.into()),
+        Err(e) => Err(Error::SplitPrefixUnreachable(e)),
+    }
 }
 
 /// This function is used to set the placeholder `{{ base-path }}` in each
@@ -29,7 +29,7 @@ fn compute_out(dir: &PathBuf, src: &PathBuf) -> Result<PathBuf, Error> {
 fn compute_base_path(dir: &PathBuf, src: &PathBuf) -> Result<String, Error> {
     match dir.strip_prefix(src) {
         Ok(res) => Ok(res.iter().fold("./".into(), |acc, _| acc + "../")),
-        Err(_) => unreachable!(),
+        Err(e) => Err(Error::SplitPrefixUnreachable(e)),
     }
 }
 
@@ -88,9 +88,9 @@ pub fn make_collection(dir: &PathBuf, src: &PathBuf, out: &PathBuf) -> Result<()
     }
 
     let mut dirs = files_walker(dir)?
-        .iter_mut()
+        .into_iter()
         .filter(|file| file.extension().is_some_and(|ext| ext == "md"))
-        .filter_map(|file| compute_out(file, src).ok().map(|o| (file.clone(), o)))
+        .filter_map(|file| compute_out(&file, src).ok().map(|o| (file.clone(), o)))
         .collect::<Vec<_>>();
 
     dirs.sort_by(|(a, _), (b, _)| {

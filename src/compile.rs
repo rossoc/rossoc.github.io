@@ -34,8 +34,8 @@ pub fn read_vars(content: &str) -> Result<HashMap<&str, String>, Error> {
 
     let res = settings
         .lines()
-        .flat_map(|s| s.split_once(':').map(|(k, v)| (k.trim(), v.trim())))
-        .map(|(k, v)| (k, v.to_string()))
+        .filter_map(|s| s.split_once(':'))
+        .map(|(k, v)| (k.trim(), v.trim().to_string()))
         .chain(once(("content", md_to_html(content))))
         .collect::<HashMap<&str, String>>();
     Ok(res)

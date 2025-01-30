@@ -1,0 +1,118 @@
+body {
+    display: grid;
+    grid-template-areas:
+    "s m"
+    "f f";
+    grid-template-columns: 260px 1fr;
+    grid-template-rows: 1fr auto;
+    overflow-y: auto;
+    background-color: var(--backgroundColorHighlight);
+}
+
+main {
+    grid-area: m;
+    background-color: var(--backgroundColorHighlight);
+}
+
+footer {
+    grid-area: f;
+    background-color: var(--backgroundColorHighlight);
+}
+
+sidebar {
+    grid-area: s;
+    min-height: 100vh;
+    width: 260px;
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+    font-size: 90%;
+}
+
+/* Sidebar header styling */
+.sidebar-header {
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.sidebar-header a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    font-size: 150%;
+    color: var(--oneColor);
+    padding: 0.8rem;
+    border: 0.1rem solid var(--oneColor);
+    border-radius: var(--round-radius);
+    transition: var(--transition);
+    font-weight: bold;
+    text-align: center;
+    background-color: var(--backgroundColor);
+}
+
+.sidebar-header a:hover {
+    background-color: var(--oneColor);
+    color: var(--backgroundColor);
+}
+
+/* Note sidebar styling */
+.note-sidebar li {
+    padding: 0.2rem;
+    border-radius: var(--round-radius);
+    transition: var(--transition);
+    background-color: var(--backgroundColor);
+    list-style: none;
+}
+
+.note-sidebar li:hover {
+    background-color: var(--backgroundColorHighlight);
+}
+
+.note-sidebar li a {
+    margin-left: 0.4rem;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.note-sidebar li a:visited {
+    color: var(--textColor);
+}
+
+/* Responsive design for phones */
+@media screen and (max-width: 700px) {
+    body {
+        grid-template-areas:
+            "m" /* Main */
+            "s" /* Sidebar */
+            "f"; /* Footer */
+        grid-template-columns: 1fr; /* Single column layout on mobile */
+        grid-template-rows: auto 1fr auto; /* Sidebar, main, footer stacked vertically */
+    }
+    sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 1rem;
+        border-right: none;
+        border-bottom: 1px solid var(--oneColor);
+    }
+
+    sidebar-header,
+    sidebar-footer {
+        text-align: center;
+    }
+
+    note-sidebar {
+        max-height: 200px;
+        overflow-y: auto;
+    }
+}

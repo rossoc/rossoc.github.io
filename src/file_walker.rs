@@ -73,7 +73,7 @@ pub fn files_walker(source_folder: &PathBuf) -> Result<Vec<PathBuf>, Error> {
 pub fn read_layout(name: &str) -> Result<String, Error> {
     let mut path = PathBuf::from("layout");
     path.canonicalize()?;
-    path = path.join(name.to_string() + ".html");
+    path.push(name.to_string() + ".html");
     Ok(read_to_string(path)?)
 }
 
