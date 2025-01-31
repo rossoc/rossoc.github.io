@@ -1,7 +1,6 @@
 --- 
-layout: note
+layout: note-0.1
 title: Math Formula
-category: preview
 ---
 
 $$
