@@ -1,0 +1,96 @@
+@media screen and (max-width: 700px) {
+    :root {
+        --textSize: 0.5rem;
+        --heading1Size: 2rem;
+        --heading2Size: 1rem;
+        --heading3Size: 0.9rem;
+        --heading4Size: 0.8rem;
+        --shortContent: 100%;
+        --content: 100%;
+    }
+}
+
+/* --------- TABLET BREAKPOINT --------- */
+
+@media screen and (min-width: 701px) and (max-width: 900px) {
+    :root {
+        --textSize: 1.5rem;
+        --heading1Size: 2.5rem;
+        --heading2Size: 2rem;
+        --heading3Size: 1.8rem;
+        --heading4Size: 1.6rem;
+        --shortContent: 55%;
+        --content: 90%;
+    }
+}
+
+/* --------- LAPTOP BREAKPOINT --------- */
+
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+    :root {
+        --textSize: 1.8rem;
+        --heading1Size: 3rem;
+        --heading2Size: 2.2rem;
+        --heading3Size: 2rem;
+        --heading4Size: 1.9rem;
+        --shortContent: 42%;
+        --content: 80%;
+    }
+}
+
+/* --------- BIG SCREEN BREAKPOINT --------- */
+
+@media screen and (min-width: 1201px) {
+    :root {
+        --textSize: 1rem;
+        --heading1Size: 2rem;
+        --heading2Size: 1.3rem;
+        --heading3Size: 1.1rem;
+        --heading4Size: 1rem;
+        --shortContent: 36%;
+        --content: 70%;
+    }
+}
+
+main {
+    font-size: var(--textSize);
+}
+
+h2 {
+    line-height: calc(1.5 * var(--heading2Size));
+    margin-bottom: 1rem;
+    font-size: var(--heading2Size);
+    text-align: left;
+}
+
+.portfolio-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: var(--textSize);
+}
+
+.portfolio-footer li a {
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: baseline;
+    heigth: 100vh;
+    margin-bottom: var(--textSize);
+}
+
+hr {
+    margin: 0;
+}

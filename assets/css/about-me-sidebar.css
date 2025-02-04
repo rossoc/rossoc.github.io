@@ -1,29 +1,30 @@
 body {
     display: grid;
     grid-template-areas:
+    "h h"
     "s m"
     "f f";
     grid-template-columns: 260px 1fr;
     grid-template-rows: 1fr auto;
     overflow-y: auto;
-    background-color: var(--backgroundColorHighlight);
+}
+
+header {
+    grid-area: h;
 }
 
 main {
     grid-area: m;
-    background-color: var(--backgroundColorHighlight);
 }
 
 footer {
     grid-area: f;
-    background-color: var(--backgroundColorHighlight);
 }
 
 sidebar {
     grid-area: s;
     min-height: 100vh;
     width: 260px;
-    background-color: var(--backgroundColor);
     color: var(--textColor);
     display: flex;
     flex-direction: column;
@@ -31,6 +32,8 @@ sidebar {
     box-sizing: border-box;
     overflow-y: auto;
     font-size: 90%;
+    border-right: 0.1rem solid var(--oneColor);
+
 }
 
 /* Sidebar header styling */
@@ -46,17 +49,13 @@ sidebar {
     font-size: 150%;
     color: var(--oneColor);
     padding: 0.8rem;
-    border: 0.1rem solid var(--oneColor);
-    border-radius: var(--round-radius);
     transition: var(--transition);
     font-weight: bold;
     text-align: center;
-    background-color: var(--backgroundColor);
 }
 
 .sidebar-header a:hover {
-    background-color: var(--oneColor);
-    color: var(--backgroundColor);
+    color: var(--oneColorHighlight);
 }
 
 /* Note sidebar styling */
@@ -91,6 +90,7 @@ sidebar {
 @media screen and (max-width: 700px) {
     body {
         grid-template-areas:
+            "h"
             "m" /* Main */
             "s" /* Sidebar */
             "f"; /* Footer */

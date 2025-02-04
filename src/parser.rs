@@ -33,11 +33,18 @@ fn compute_base_path(dir: &PathBuf, src: &PathBuf) -> Result<String, Error> {
     }
 }
 
+fn read_title(src: &PathBuf) -> Option<String> {
+    let content = read_to_string(src).ok()?;
+    match content.lines().find(|s| s.starts_with("title:")) {
+        Some(title) => Some(title[6..].trim().to_string()),
+        None => None,
+    }
+}
+
 /// Format a link for the function [`make_links`]
 fn make_link(dir: &(PathBuf, PathBuf)) -> Result<String, Error> {
-    let content = read_to_string(dir.0.clone())?;
-    let title = match content.lines().find(|s| s.starts_with("title: ")) {
-        Some(title) => title[7..].trim().to_string(),
+    let title = match read_title(&dir.0) {
+        Some(title) => title,
         None => file_name(&dir.1),
     };
     Ok(format!(
@@ -52,7 +59,7 @@ fn make_link(dir: &(PathBuf, PathBuf)) -> Result<String, Error> {
 fn make_links(links: &Vec<(PathBuf, PathBuf)>) -> String {
     links
         .iter()
-        .filter(|(_, to)| !(file_name(to) == "index.html"))
+        .filter(|(from, to)| file_name(to) != "index.html" && file_name(from) != "")
         .filter_map(|dir| make_link(dir).ok())
         .fold(String::new(), |acc, link| acc + &link)
 }
@@ -108,13 +115,29 @@ pub fn make_collection(dir: &PathBuf, src: &PathBuf, out: &PathBuf) -> Result<()
 
     for i in 1..dirs.len() - 1 {
         vars.insert("next-page", path_to_str(&dirs[i - 1].1));
+        vars.insert(
+            "next-page-title",
+            read_title(&dirs[i - 1].0).unwrap_or_default(),
+        );
         vars.insert("previous-page", path_to_str(&dirs[i + 1].1));
+        vars.insert(
+            "previous-page-title",
+            read_title(&dirs[i + 1].0).unwrap_or_default(),
+        );
         make_page((&dirs[i].0, out.join(&dirs[i].1)), &vars)?;
     }
 
     if dirs.len() > 2 {
         vars.insert("next-page", path_to_str(&dirs[dirs.len() - 1].1));
+        vars.insert(
+            "next-page-title",
+            read_title(&dirs[dirs.len() - 1].0).unwrap_or_default(),
+        );
         vars.insert("previous-page", path_to_str(&dirs[1].1));
+        vars.insert(
+            "previous-page-title",
+            read_title(&dirs[1].0).unwrap_or_default(),
+        );
     }
     if dirs.len() > 1 {
         make_page((&dirs[0].0, out.join(&dirs[0].1)), &vars)?
@@ -123,13 +146,13 @@ pub fn make_collection(dir: &PathBuf, src: &PathBuf, out: &PathBuf) -> Result<()
 }
 
 /// Given the source and the output directory, generates the HTML.
-pub fn make_site(src: &str, out: &str) -> Result<(), Error> {
-    if !PathBuf::from(out).exists() {
+pub fn make_site(src: &PathBuf, out: &PathBuf) -> Result<(), Error> {
+    if !out.exists() {
         create_dir_all(out)?;
     }
 
-    let src = &PathBuf::from(src).canonicalize()?;
-    let out = &PathBuf::from(out).canonicalize()?;
+    let src = &src.canonicalize()?;
+    let out = &out.canonicalize()?;
 
     let mut dirs = dirs_walker(src)?;
     dirs.pop();

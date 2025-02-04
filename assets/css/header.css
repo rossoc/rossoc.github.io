@@ -1,0 +1,41 @@
+header {
+    padding: 1rem 0.2rem;
+    border-bottom: 0.1rem solid var(--oneColor);
+}
+
+header a {
+    font-size: 150%;
+    color: var(--oneColor);
+    transition: var(--transition);
+}
+
+header a:hover {
+    color: var(--oneColorHighlight);
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#navbar-header {
+    padding: 0rem var(--textSize);
+}
+
+#navbar-header a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    margin-left: 1.5rem;
+}

@@ -67,7 +67,7 @@ fn build_layout(template: &str) -> Result<String, Error> {
 /// Input:
 /// - content: the content to look for the placeholders
 /// - vars: the map made by `(key, value)`
-fn replace_var(content: &str, vars: &HashMap<&str, String>) -> String {
+fn replace_vars(content: &str, vars: &HashMap<&str, String>) -> String {
     let re = Regex::new(r"\{\{\s*([a-zA-Z0-9_-]+)\s*\}\}")
         .expect("compile::replace_var: regex ill defined");
     re.replace_all(content, |cap: &regex::Captures| {
@@ -95,7 +95,7 @@ pub fn to_html(note: &str, env: &HashMap<&str, String>) -> Result<String, Error>
         Some(layout) => build_layout(layout),
         None => Err(Error::MissingLayoutGeneric),
     }?;
-    Ok(replace_var(&content, &vars))
+    Ok(replace_vars(&content, &vars))
 }
 
 #[cfg(test)]
@@ -161,37 +161,37 @@ mod tests {
         // Test: Normal replacement
         let content = "Hello {{ name }}, your score is {{ score }}!";
         let expected = "Hello Alice, your score is 85!";
-        assert_eq!(replace_var(content, &vars), expected);
+        assert_eq!(replace_vars(content, &vars), expected);
 
         // Test: Normal replacement
         let content = "Hello {{ name }}, your pwd is {{ base-path }}!";
         let expected = "Hello Alice, your pwd is hello!";
-        assert_eq!(replace_var(content, &vars), expected);
+        assert_eq!(replace_vars(content, &vars), expected);
 
         // Test: Missing variable should remain unchanged
         let content = "Hello {{ user }}, your score is {{ score }}!";
         let expected = "Hello {{ user }}, your score is 85!";
-        assert_eq!(replace_var(content, &vars), expected);
+        assert_eq!(replace_vars(content, &vars), expected);
 
         // Test: Extra spaces in placeholders
         let content = "Hello {{  name  }}, score: {{  score   }}.";
         let expected = "Hello Alice, score: 85.";
-        assert_eq!(replace_var(content, &vars), expected);
+        assert_eq!(replace_vars(content, &vars), expected);
 
         // Test: No placeholders
         let content = "No placeholders here.";
         let expected = "No placeholders here.";
-        assert_eq!(replace_var(content, &vars), expected);
+        assert_eq!(replace_vars(content, &vars), expected);
 
         // Test: Empty string
         let content = "";
         let expected = "";
-        assert_eq!(replace_var(content, &vars), expected);
+        assert_eq!(replace_vars(content, &vars), expected);
 
         // Test: Placeholder but empty map
         let vars: HashMap<&str, String> = HashMap::new();
         let content = "Hello {{ name }}!";
         let expected = "Hello {{ name }}!";
-        assert_eq!(replace_var(content, &vars), expected);
+        assert_eq!(replace_vars(content, &vars), expected);
     }
 }
