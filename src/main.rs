@@ -39,11 +39,17 @@ use crate::parser::make_site;
 use crate::watcher::exec_on_event;
 use chrono::Local;
 use file_walker::copy_dir_all;
+use std::env::args;
 use std::path::PathBuf;
 
 fn main() -> Result<(), std::io::Error> {
-    let target = PathBuf::from("./");
-    let dest = PathBuf::from("./_site/");
+    let (target, dest, serve) = get_input();
+
+    copy_dir_all(&target, &dest).unwrap();
+    match make_site(&target, &dest) {
+        Ok(_) => println!("success {}", Local::now().format("%d/%m/%Y-%H:%M:%S")),
+        Err(e) => println!("error: {:?}", e),
+    }
 
     let function = |_| -> () {
         copy_dir_all(&target, &dest).unwrap();
@@ -53,10 +59,39 @@ fn main() -> Result<(), std::io::Error> {
         }
     };
 
-    match exec_on_event(&target, &function) {
-        Ok(()) => (),
-        Err(e) => eprintln!("{}", e),
-    };
+    if serve {
+        match exec_on_event(&target, &function) {
+            Ok(()) => (),
+            Err(e) => eprintln!("{}", e),
+        };
+    }
 
     Ok(())
+}
+
+fn get_input() -> (PathBuf, PathBuf, bool) {
+    let mut src = "./".to_string();
+    let mut out = "./_site".to_string();
+    let mut s = false;
+
+    let args = args().collect::<Vec<_>>();
+    let mut args_iter = args[1..].iter();
+    while let Some(arg) = args_iter.next() {
+        match arg.as_str() {
+            "-s" => src = args_iter.next().unwrap().to_string(),
+            "-o" => out = args_iter.next().unwrap().to_string(),
+            "--serve" => {
+                s = true;
+            }
+            _ => {
+                // help
+                println!(
+                    "Usage: {} [-s source] [-o output] [--serve]\n entered {}, instead",
+                    args[0], arg
+                );
+                std::process::exit(0);
+            }
+        }
+    }
+    (src.into(), out.into(), s)
 }
