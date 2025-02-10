@@ -1,16 +1,17 @@
-header {
-    padding: 1rem 0.2rem;
-    border-bottom: 0.1rem solid var(--oneColor);
-}
-
 header a {
+    margin-left: 1.5rem;
+    display: flex;
     font-size: 150%;
     color: var(--oneColor);
     transition: var(--transition);
+    border: 0.1rem solid var(--oneColor);
+    padding: 0.5rem;
 }
 
 header a:hover {
     color: var(--oneColorHighlight);
+    border: 0.1rem solid var(--oneColorHighlight);
+    border-radius: var(--round-radius);
 }
 
 #navbar {
@@ -33,9 +34,4 @@ header a:hover {
     margin: 0;
     padding: 0;
     display: flex;
-}
-
-#navbar ul li a {
-    text-decoration: none;
-    margin-left: 1.5rem;
 }

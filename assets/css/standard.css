@@ -371,15 +371,16 @@ hr {
     flex-direction: row;
     gap: 1.2rem;
     padding: 0;
+    flex-wrap: wrap;
 }
 
 #home-links li {
     display: block;
-    width: 100%;
+    flex-grow: 1;
 }
 
 #home-links li a {
-    display: block;
+    display: flex;
     text-decoration: none;
     color: var(--oneColor);
     padding: 0.4rem;
@@ -388,11 +389,19 @@ hr {
     transition: var(--transition);
     font-weight: bold;
     text-align: center;
+    align-items: center;
+    gap: 0.5em;
+    justify-content: center;
 }
 
 #home-links li a:hover {
     color: var(--oneColorHighlight);
     border: 0.1rem solid var(--oneColorHighlight);
+}
+
+#home-links svg {
+    width: calc(0.7 * var(--textSize));
+    height: calc(0.7 * var(--textSize));
 }
 
 /* Collection page */

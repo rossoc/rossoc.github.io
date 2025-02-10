@@ -18,7 +18,7 @@ Basically, I picked computer science, because I think it is effectively the most
 useful thing for me, and I don't mean it career-wise: PCs are the core of
 our society. Without them, we wouldn't be able to organize ourselves.
 
-# Education
+## Education
 
 I graduated with a Bachelor's Degree in Computer Science from Padua's University
 in 2024. Then, I started the Master's in the same field at the University of 
