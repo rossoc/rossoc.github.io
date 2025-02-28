@@ -43,7 +43,7 @@ use std::env::args;
 use std::path::PathBuf;
 
 fn main() -> Result<(), std::io::Error> {
-    let (target, dest, serve) = get_input();
+    let (target, dest, watch, _) = get_input();
 
     copy_dir_all(&target, &dest).unwrap();
     match make_site(&target, &dest) {
@@ -59,7 +59,7 @@ fn main() -> Result<(), std::io::Error> {
         }
     };
 
-    if serve {
+    if watch {
         match exec_on_event(&target, &function) {
             Ok(()) => (),
             Err(e) => eprintln!("{}", e),
@@ -69,10 +69,11 @@ fn main() -> Result<(), std::io::Error> {
     Ok(())
 }
 
-fn get_input() -> (PathBuf, PathBuf, bool) {
+fn get_input() -> (PathBuf, PathBuf, bool, bool) {
     let mut src = "./".to_string();
     let mut out = "./_site".to_string();
-    let mut s = false;
+    let mut watch = false;
+    let mut serve = false;
 
     let args = args().collect::<Vec<_>>();
     let mut args_iter = args[1..].iter();
@@ -80,18 +81,17 @@ fn get_input() -> (PathBuf, PathBuf, bool) {
         match arg.as_str() {
             "-s" => src = args_iter.next().unwrap().to_string(),
             "-o" => out = args_iter.next().unwrap().to_string(),
-            "--serve" => {
-                s = true;
-            }
+            "--watch" => watch = true,
+            "--serve" => serve = true,
             _ => {
                 // help
                 println!(
-                    "Usage: {} [-s source] [-o output] [--serve]\n entered {}, instead",
+                    "Usage: {} [-s source] [-o output] [--watch] [--serve]\n entered {}, instead",
                     args[0], arg
                 );
                 std::process::exit(0);
             }
         }
     }
-    (src.into(), out.into(), s)
+    (src.into(), out.into(), watch, serve)
 }

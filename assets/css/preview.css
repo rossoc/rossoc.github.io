@@ -14,7 +14,7 @@ hr {
 }
 
 .clickable-area:hover {
-	background-color: var(--twoColor);
+	background-color: var(--oneColorHighlight);
 }
 
 #top {
