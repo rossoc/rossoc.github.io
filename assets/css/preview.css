@@ -7,10 +7,12 @@ hr {
 }
 
 .clickable-area {
+    cursor: pointer;
 	position: fixed;
 	z-index: 100;
 	background-color: var(--oneColor);
 	border-radius: 10px;
+    transition: var(--transition);
 }
 
 .clickable-area:hover {
@@ -56,4 +58,43 @@ ul li, ol li {
 
 #home-links {
     margin-top: 10vw;
+}
+
+#theme-button {
+    background: transparent;
+    position: fixed;
+	z-index: 100;
+    top: 4%;
+	right: 2%;
+    color: var(--oneColor);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+#theme-button:hover {
+    color: var(--oneColorHighlight);
+}
+
+#theme-button svg {
+    width: 30px;
+    height: 30px;
+}
+
+#theme-button:active {
+    transform: scale(0.9);
+}
+
+@media (prefers-color-scheme: light) {
+    .light {
+        display: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .dark {
+        display: none;
+    }
 }
