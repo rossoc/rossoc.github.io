@@ -1,6 +1,6 @@
 ---
 layout: preview
-title: Open Source: a Strategic Opportunity for Europe
+title: How Open Source can start 3.0 Industrial Revolution in Europe
 ---
 
 Open Source projects offer a compelling model for sharing software and fostering
@@ -10,7 +10,7 @@ the European software ecosystem, drive innovation, and lead to significant
 economic and technological benefits.**  
 
 At the following page you can read an essay on the topic: [Open Source: an
-opportunity for Europe](preview/open_source_2).
+opportunity for Europe](notes/open_source).
 
 ---
 
@@ -140,7 +140,7 @@ invest in Open Source projects.
 
 <ul id="home-links">
         <li>
-            <a href="https://danesinoo.github.io/preview/about_me.html">Contacts</a>
+            <a href="portfolio">Contacts</a>
             </a>
         </li>
 </ul>

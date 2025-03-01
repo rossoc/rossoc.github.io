@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Open Source: an opportunity for Europe
+title: Open Source: The Key to Europe’s Innovation and Sovereignty
 ---
 
 Open Source projects offer a compelling model for sharing software and fostering 
