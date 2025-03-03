@@ -536,3 +536,10 @@ blockquote {
 blockquote p {
     margin: 0;
 }
+
+code {
+    text-size: 90%;
+    padding: 0 0.5 rem;
+    background-color: var(--backgroudnColorHighlight);
+    font-family: 'Roboto', monospace;
+}
