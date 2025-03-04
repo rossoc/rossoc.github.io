@@ -13,11 +13,20 @@ title: Command Line to Remember
 - `git commit --amend [--no-edit]` - Adds the staged file into the last commit [without changing the message]
 - `git fetch --prune` - updates the list of remote branches and remove any references to branches that have been deleted on the remote.
 
+## Docker
+
+- `docker compose up -d --build` — if necessary, it recreates the images and
+  run the containers 
+- `docker compose stop` — stops the containers, the images are preserved
+- `docker compose down --rmi all` - remove the containers and deletes the images
+- `docker compose restart` — the images are unchanged, (i.e. `up` followed by `down`)
+- `docker compose exec -it <service> <command>` — if command is `bash`, you enter the container
+
 ## UV
 
 Checkout UV [here](https://docs.astral.sh/uv/)
 
-- `uv pip install <package-name>` — Install `<package-name`
+- `uv add <package-name>` — Install `<package-name`, and add it to the list of dependencies
 - `source .venv/bin/activate` — The virtual environment can be "activated" to make its packages available 
 - `deactivate` — To deactivate the environment
 - `uv venv --python 3.11` — select the python version (3.13 in this case)
@@ -27,12 +36,3 @@ Checkout UV [here](https://docs.astral.sh/uv/)
 - `uv pip freeze` — list all of the packages in the environment in a requirements.txt format
 - `uv pip compile pyproject.toml -o requirements.txt` — lock dependencies declared in a pyproject.toml
 - `uv pip sync pyproject.toml` — sync an environment with a pyproject.toml file
-
-## Docker
-
-- `docker compose up -d --build` — if necessary, it recreates the images and
-  run the containers 
-- `docker compose stop` — stops the containers, the images are preserved
-- `docker compose down --rmi all` - remove the containers and deletes the images
-- `docker compose restart` — the images are unchanged, (i.e. `up` followed by `down`)
-- `docker compose exec -it <service> <command>` — if command is `bash`, you enter the container
