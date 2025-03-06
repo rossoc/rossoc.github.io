@@ -6,19 +6,19 @@ title: Experience
 ## Machine Learning Intern
 from July 2024 to August 2024,  
 at University of Padua, Italy  
-- Conducted research on **sentiment analysis** using machine learnign models.
-- **Implemented and compared** machine learning algorithms (Kernel Methods,
-    RNN, BERT)
+
+- **Sentiment analysis** on **SST-5 dataset** to examine sytax's role in meaning.
+- Achieved **55.2%** accuracy with **kernel methods** with syntactic information. 
+- Accuracy up to **57.3%** with **LLMs (Bert, RoBERTa)**.
 
 ---
 
 ## Front Office Assistant
 from August 2023 to November 2023,  
 at University of Padua, Italy
-- Responsabilities included **data processing support**, **front office
-tasks**, and **archiving**.
-- 200h collaboration with **Studenti Career Office**.
-- Selected by merit for a **part-time studenti collaboration**.
+
+- **Managed** a database of **7M+ student records**, ensuring accuracy.
+- Assisted students via **in-person** and **email**, for efficient support.
 
 ---
 
@@ -26,5 +26,5 @@ tasks**, and **archiving**.
 from June 2019 to July 2019,  
 at TPA Srl, Motta di Livenza, Italy  
 
-- Fabricated and assembled automated machines, by cutting, shaping and
-  preparing metal parts according to project specifications.
+- Joined in the **automated machines production** pipeline.
+- Cutting, shaping and painting metal components.

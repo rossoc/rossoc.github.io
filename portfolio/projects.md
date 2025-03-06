@@ -5,18 +5,16 @@ title: Projects
 
 ## Somebody's Blog!
 
-- **Personal development** blog.
-- Technologies: Markdown, **Rust**, **GitHub Actions**.
-- Infrastructure to convert Markdown into HTML.
+- **Automated blog** to convert **Markdown to HTML** with **Rust** and **GitHub Actions**.
+- **CI/CD pipeline**, ensuring every post deploys blazingly fast—no manual work needed.
 
-NB the software is pretty much the same as this website.
+NB this website is based on such software.
 
 ---
 
 ## [Weav](https://www.weav.it)
-- **Cross-platform** social media.
-- Backend: **Python**, **Django**, **gRPC**, **TypeScript**.
-- Frontend: **TypeScript**, **React-Native**, **Redux**.
+- **Cross-platform app** to discover and advertise social events, for pubs, discos, coffees and young people.
+- Engineered a scalable backend using **Python**, **Django**, and **gRPC**.
 
 ---
 
