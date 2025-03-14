@@ -36,3 +36,4 @@ Checkout UV [here](https://docs.astral.sh/uv/)
 - `uv pip freeze` — list all of the packages in the environment in a requirements.txt format
 - `uv pip compile pyproject.toml -o requirements.txt` — lock dependencies declared in a pyproject.toml
 - `uv pip sync pyproject.toml` — sync an environment with a pyproject.toml file
+- `uv run --with jupyter jupyter lab` — start a Jupyter server with access to the project's virtual environment
