@@ -1,11 +1,11 @@
 @media (prefers-color-scheme: light) {
     :root {
-        --backgroundColor: #EDE3E4;
-        --backgroundColorHighlight: #D5CCCD;
+        --backgroundColor: #D5CCCD;
+        --backgroundColorHighlight: #EDE3E4;
         --textColor: #333;
         --oneColor: #691B25;
         --twoColor: #4c722f;
-        --oneColorHighlight: #cc3333;
+        --oneColorHighlight: #cc4d33;
         --twoColorHighlight: #608F3B;
     }
 }
@@ -153,6 +153,7 @@ h4 {
 a {
     color: var(--twoColor);
     border-radius: var(--round-radius);
+    transition: var(--transition);
 }
 
 a:hover {
