@@ -1,138 +1,130 @@
----
+--- 
 layout: page
-title: Open Source: The Key to Europe’s Innovation and Sovereignty
+title: Open Source: un'opportunità per l'Italia 
 ---
 
-Open Source projects offer a compelling model for sharing software and fostering 
-collaboration. Europe has both the opportunity and the necessity to invest in 
-initiatives related to Open Source development. 
-**Such investments can enhance the European software ecosystem, drive 
-innovation, and lead to significant economic and technological benefits.**
+I progetti open source sono un metodo estremamente interessante di
+collaborazione. Credo che l’Italia (e sperabilmente anche l'Europa) abbia la
+possibilità e la necessità di incentivare alcune iniziative legate proprio a 
+questo ambito.  
 
-## What is Open Source?
+Con open source si intende che il codice sorgente di una libreria, oppure di 
+un’applicazione, è libero di essere utilizzato come si meglio si creda, 
+rimanendo esente da oneri e obblighi di alcun tipo nei confronti dell’autore.  
 
-Open Source means that the source code of a library or application is freely 
-available for use, modification, and distribution. While users can utilize the 
-software as they see fit, there are different licenses that preserve the 
-author's rights and outline specific obligations. These licenses help maintain 
-a balance between freedom of use and intellectual property protection.
+I progetti open source permettono alle aziende che vendono un prodotto software, 
+ovvero informatico, di collaborare. 
+Due aziende non hanno bisogno di sviluppare due librerie analoghe per risolvere 
+lo stesso problema. 
+Possono invece svilupparne una sola, renderla open source e collaborare 
+attraverso essa.
 
-## Benefits of Open Source
+Dal momento che il progetto in questione è open source, le due aziende possono 
+anche cambiarne alcune componenti per adattare meglio il progetto alla propria 
+piattaforma.
 
-Open Source projects allow companies that develop or use software to share 
-common libraries, fostering collaboration and reducing redundancy. 
-Instead of multiple companies independently developing libraries that solve the 
-same problem, they can contribute to a single Open Source project. 
-This collaborative approach:
+I progetti open source, in genere, sono condivisi tra moltissime aziende, 
+questo vuol dire che è complesso gestirne l’evoluzione. 
+La mia proposta è quella di finanziare i progetti open source che lo meritano, 
+così che siano assunti dei manutentori.
 
-- **Saves Resources**: Reduces the need for duplicate development efforts.
-- **Accelerates Innovation**: Combines expertise from various sources to enhance 
-    the quality and functionality of the software.
-- **Enhances Customization**: Allows companies to build adapters around the 
-    shared library to better fit their specific platforms.
+Il lavoro dei manutentori è quello di aggiornare la libreria seguendo le 
+istruzioni e le richieste delle aziende italiane che sono tracciate attraverso 
+le issue (questo termine può sembrare oscuro, ma nel nostro campo è noto); 
+inoltre queste figure si rendono disponibili a proporre i casi d'uso della 
+libreria e ne chiariscono il metodo di utilizzo 
+(gli è affidata anche la parte relativa alla documentazione, fondamentale per 
+una collaborazione efficace ed efficiente).
 
-## Maintainers
+## In che modo sono gestiti i finanziamenti?
 
-While Open Source projects are often shared among many contributors, managing 
-their development can be challenging. To address this, **I propose that Europe 
-funds deserving Open Source projects, enabling maintainers to be hired to 
-oversee them**.
-The maintainers' responsibilities would include:
+Per rispondere a questa domanda ho tratto ispirazione dal metodo che utilizza 
+Spotify con i suoi creator. 
+Le entrate della piattaforma sono distribuite equamente tra tutti i creator, 
+che caricano i propri contenuti audio su Spotify, in base al numero di ascolti 
+che ricevono.  
 
-- **Improving the Library**: Acting on instructions and requests from European 
-    companies, tracked through issues or tickets.
-- **Proposing Use Cases**: Identifying new applications and opportunities for 
-    the library.
-- **Updating Documentation**: Ensuring that all documentation is current and 
-    accessible.
+Allo stesso modo i progetti open source ricevono fondi in base al numero di 
+issue delle sole aziende italiane (o europee). 
+Infatti, ad una issue corrisponde un problema che un’azienda ha riscontrato 
+nell'utilizzo della libreria. 
+Questo metodo permette di distribuire i fondi in maniera equa e trasparente, 
+inoltre permette di incentivare le aziende a collaborare con i progetti open 
+source e a proporre modifiche e miglioramenti.  
 
-## Funding Mechanism
+Non solo, i finanziamenti sono distribuiti sui progetti che richiedono 
+manutenzione, in modo che le aziende possano usufruire di una libreria sempre 
+aggiornata e funzionante. Infatti, un progetto che ha un grande numero di issue 
+è un progetto che ha un grande potenziale di crescita e di utilizzo.
 
-Inspired by Spotify's method of compensating creators, **Open Source projects 
-should receive funds based on the level of engagement from European companies**. 
-Two possible approaches are:
+## In quale modo sono ottenuti i dati di utilizzo?
 
-1. **Issue-Based Funding**: Projects receive funds proportional to the number of 
-    issues opened by European companies.
-2. **Voting System**: Companies have votes proportional to their number of 
-    employees or other metrics. They can vote for the projects or issues they
-    want to be solved.
+La maggior parte dei progetti open source si trova su GitHub, ovvero una 
+piattaforma che permette di salvare del codice online. 
+Se conosciamo il nome del progetto salvato su GitHub (e questo è open source), 
+tramite il sito di GitHub abbiamo la possibilità di leggere, copiare, scaricare 
+o proporre modifiche al codice sorgente.  
 
-**Why Is This a Good Idea?**
+Per questo motivo, la proposta iniziale è chiedere una collaborazione a GitHub 
+per avere accesso ai dati che l’Italia utilizza per distribuire i finanziamenti. 
+Successivamente credo che sia necessario sviluppare una piattaforma di proprietà 
+italiana (o europea) per gestire i progetti open source così finanziati. 
+Questo perché una piattaforma italiana permette di estrarre i dati di utilizzo 
+in maniera più precisa e flessibile.  
 
-- **Alignment with Demand**: Funding is directed toward projects and issues that 
-    are most relevant to the needs of European companies.
-- **Fair Resource Allocation**: Companies with greater usage and reliance on Open 
-    Source projects have a proportionate influence on funding decisions.
-- **Incentivizes Quality and Responsiveness**: Maintainers are motivated to 
-    address the most pressing issues, improving overall software quality.
+Inoltre, GitHub è una piattaforma privata di proprietà di Microsoft, che sta 
+rispondendo a delle accuse di uso improprio del codice. 
+Infatti il codice sorgente dei programmi può essere utilizzato per allenare 
+delle intelligenze artificiali, nel caso di GitHub è stato utilizzato per 
+allenare Copilot.  
 
-## How are the usage data obtained?
+Una piattaforma di proprietà italiana (o europea) permette di rendere i codici 
+sorgenti disponibili per la ricerca (universitaria e non) e ne protegge 
+(maggiormente) la proprietà intellettuale.  
 
-Most Open Source projects are hosted on GitHub, an online platform for storing 
-and sharing code. By collaborating with GitHub, Europe could obtain the 
-necessary data to distribute funds effectively among projects.  
-However, developing a European platform to manage these projects may offer 
-additional benefits:
+## In quale modo possono essere utilizzati i finanziamenti?
 
-- **Data Efficiency**: A dedicated platform would allow for more effective and 
-    efficient data collection.
-- **Intellectual Property Protection**: Ensures that software is available for 
-    research while preserving the intellectual property rights of European 
-    contributors.
-- **Autonomy**: Reduces reliance on a private company (GitHub is owned by 
-    Microsoft) that may have conflicting interests.
+Dato che l’Italia investe nel suddetto progetto, ha tutto il diritto di imporre 
+dei limiti chiari e definiti. 
+A tal proposito la mia idea è quella di fornire dei fondi per gli stipendi dei 
+manutentori, che devono essere in Italia, e per altre spese correlate ai 
+progetti open source a cadenza mensile. 
+Ciascun finanziamento ha un periodo di tempo per essere speso, 
+oltre il quale, è revocato.  
 
-## How can the funds be used?
+Altrimenti, si può pensare di pagare i manutentori in base al numero di issue 
+risolte. 
+Effettivamente non ho molta esperienza in questo campo, 
+per cui non so se questa sia una buona idea.
 
-Since Europe would be investing in these projects, it has the right to establish 
-clear and definitive license agreements. Funds could be used to:
+## Monopolio dei progetti open source.
 
-- **Provide Salaries**: Compensate maintainers who reside in Europe.
-- **Cover Management Expenses**: Support other costs related to project 
-    management on a monthly basis.
-- **Implement Time-Limited Funding**: Unspent funds after a certain period are 
-    revoked, ensuring efficient use.
-- **Performance-Based Compensation**: Alternatively, maintainers could be paid 
-    based on the number of resolved issues.
+Dal momento che i progetti open source sono finanziati dall'Italia, secondo le 
+richieste delle aziende italiane, si rischia di incorrere nel pericolo in cui 
+un'azienda italiana proponga molte issue per un progetto open source in modo da 
+monopolizzarne il finanziamento (si tratta di una questione in cui incorrono i 
+progetti open source a livello globale, in cui aziende come Google, Meta o 
+Microsoft dettano la linea evolutiva di un progetto open source in base alle 
+proprie esigenze).  
 
-I have virtually no experience in this field, therefore you can come up with
-better and more detailed ideas.
+Per evitare questo problema, si potrebbe pensare di limitare il numero di issue 
+che un'azienda può proporre per un progetto open source in un determinato 
+periodo di tempo, in base al numero di dipendenti oppure in base al fatturato.  
 
-## Preventing Monopolies in Open Source Projects
+Vorrei far notare che fino ad ora ho parlato di come le aziende beneficerebbero 
+di un’iniziativa di questa portata; 
+in realtà quando parlo di aziende mi riferisco anche agli enti pubblici, 
+alle fondazioni, ai privati e a qualunque tipologia di associazione di persone 
+che utilizza del software.  
 
+Vorrei pertanto scaturire dell’interesse da parte dell’Italia su questo 
+argomento, sottolineando come l’open source, così supportato, sia proficuo non 
+solo per le aziende e per gli sviluppatori coinvolti nel campo del software, ma 
+anche per l’Italia stessa in quanto aumenterebbe la coesione e la cooperazione 
+tra le aziende e gli enti pubblici italiani.  
 
-There is a risk that European companies might dominate the development of 
-Open Source projects they fund, similar to how global companies like Google, 
-Meta, or Microsoft influence Open Source projects to meet their needs. 
-To prevent this:
-
-- **Develop a Robust Voting System**: Create a transparent and fair system that 
-    balances the interests of all stakeholders.
-- **Ensure Diverse Representation**: Include input from small and 
-    medium-sized enterprises, public entities, and individual contributors.
-- **Set Governance Policies**: Establish rules that prevent any single entity 
-    from having disproportionate control over a project's direction.
-
-## Conclusion
-
-**Investing in Open Source is in Europe's best interest**. 
-Such an initiative benefits not just companies but also public entities, 
-foundations, private citizens, and any organization that uses software. 
-By strengthening the European software ecosystem, Europe can:
-
-- **Enhance IT Infrastructure**: Build a more robust and secure technological 
-    foundation.
-- **Foster Tech Culture**: Encourage innovation and collaboration across the 
-    continent.
-- **Optimize Resource Allocation**: Save money and developer time, allowing 
-    focus on creating innovative products rather than redundant libraries.
-
-In summary, a strategic investment in Open Source projects can drive significant 
-advancements in Europe's technological capabilities, benefiting the entire 
-society.  
-Finally, I want to point out that other countries are already investing in this
-field, for example, Switzerland requires all government software to be Open
-Source [[^]](https://www.bk.admin.ch/bk/en/home/digitale-transformation-ikt-lenkung/bundesarchitektur/open_source_software.html#).
-
-You can find the PDF version of this article [here](preview/open_source_essay.pdf).
+A dire il vero, ritengo che un’iniziativa di questo tipo sia di gran lunga più 
+benefica, efficace ed efficiente se attuata a livello europeo, ma procedendo per 
+gradi, l'Italia potrebbe essere un esempio per l'Europa. 
+Mi rendo conto che non si tratti di un'idea perfetta, 
+ma ritengo che sia un buon punto di partenza.
