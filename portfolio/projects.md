@@ -3,37 +3,30 @@ layout: portfolio
 title: Projects 
 ---
 
-## Somebody's Blog!
-
-- **Automated blog** to convert **Markdown to HTML** with **Rust** and **GitHub Actions**.
-- **CI/CD pipeline**, ensuring every post deploys blazingly fast—no manual work needed.
-
-NB this website is based on such software.
-
----
-
-## [Weav](https://www.weav.it)
-- **Cross-platform app** to discover and advertise social events, for pubs, discos, coffees and young people.
-- Engineered a scalable backend using **Python**, **Django**, and **gRPC**.
-
----
-
 ## [Easy Meal](https://github.com/Project-SWEnergy/Easy-Meal)
 
-- **Web application** designed to streamline restaurant reservations and order.
-- Backend: **Node.js**, **Nest.js**, [**Drizzle ORM**](https://orm.drizzle.team/),
-**PostgreSQL**.
-- Frontend: **Angular**.
-- **Docker** for the deployment.
+- **Web application** to streamline restaurant reservations and orders.
+- Implemented the backend in [Node.js](https://nodejs.org/en) with [Nest.js](https://nestjs.com/) and [Drizzle ORM](https://orm.drizzle.team/).
+- Frontend in [Angular](https://angular.dev/): levereging on dependency injection.
+- Deploy in [Docker](https://www.docker.com/) for scalability and
+  platform independence.
 - Evaluation: **25/30**
 
 ---
 
 ## [Music vs Robot](https://github.com/danesinoo/music_vs_robot)
 
-- **Tower-defense-style game**.
-- **C++14** with **Qt framework**.
-- **Clear separation of concerns** to enhance maintainability and scalability.
-- Applied key **object-oriented principles** such as encapsulation,
-  polymorphism, and modularity.
+- Developed **Tower-defense-style game** insired by _Plants vs Zombies_.
+- Implemented in **C++14** with [Qt Framework](https://www.qt.io/product/framework), automated with [Makefile](https://makefiletutorial.com/)
+- Focus on **object-oriented principles**: encapsulation, polymorphism, and modularity.
 - Evaluation: **3/3 with honors**.
+
+---
+
+## [Somebody's Blog!](https://github.com/danesinoo/danesinoo.github.io)
+
+- **Automated blog** to convert **Markdown to HTML** with **Rust** and **GitHub Actions**.
+- **Open Source** project for **personal notes**, **project management**, and
+  journaling.
+- Because keeping a daily logbook while working is incredibly useful.
+- This website is based on such software.

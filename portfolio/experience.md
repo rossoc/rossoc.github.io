@@ -7,9 +7,20 @@ title: Experience
 from July 2024 to August 2024,  
 at University of Padua, Italy  
 
-- **Sentiment analysis** on **SST-5 dataset** to examine sytax's role in meaning.
-- Achieved **55.2%** accuracy with **kernel methods** with syntactic information. 
-- Accuracy up to **57.3%** with **LLMs (Bert, RoBERTa)**.
+- Performed **sentiment analysis** on **SST-5 dataset** to examine whether
+  syntax conveys meaning.
+- Achieved **55.2%** accuracy with **tree-kernel methods** with syntactic data. 
+- Accuracy up to **57.3%** with **LLMs (Bert, RoBERTa)** w/o syntactic
+  information.
+
+---
+
+## Software Engineer
+from July 2022 to August 2023,  
+at [Weav](https://www.weav.it), Padua, Italy
+
+- **Social media** to discover and advertise social **events**, pubs, and coffees.
+- Engineered a scalable backend in **Python** with **Django** and **Docker**.
 
 ---
 
