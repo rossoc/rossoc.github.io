@@ -9,8 +9,8 @@
     homepage: "danesinoo.github.io",
   ),
   entity: (
-    target: "BioLib Careers",
-    name: "BioLib",
+    target: "European Commission",
+    name: "European Parliament",
   ),
   title: [Open Source: an opportunity for Europe],
 )
