@@ -154,6 +154,7 @@ a {
     color: var(--twoColor);
     border-radius: var(--round-radius);
     transition: var(--transition);
+    text-decoration: none;
 }
 
 a:hover {
@@ -271,6 +272,27 @@ nav a {
   text-decoration: none;
   font-size: 1.1rem;
   padding: 0.5rem 0;
+}
+
+nav#navbar a:hover {
+    color: var(--oneColor);
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0; /* Start from the right instead of left */
+  width: 0;
+  height: 2px;
+  background: var(--oneColor);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+  left: 0; /* When hovered, stretch from left to right */
+  right: auto; /* Reset the right position */
 }
 
 table {
@@ -442,20 +464,43 @@ hr {
 /* Collection page */
 
 .link-list, .note-list {
+    list-style-type: none;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     flex-direction: column;
-    font-weight: bold;
-    font-size: 150%;
     margin: 0rem 2rem 0 2rem;
 }
 
 .link-list li a, .note-list li a {
-    text-decoration: none;
-    padding: 0.5rem;
+    position: relative;
 }
 
+.link-list li a:hover, .note-list li a:hover {
+    color: var(--twoColor);
+}
+
+
+.link-list li a:visited:hover, .note-list li a:visited:hover {
+    color: var(--oneColor);
+}
+
+.link-list li a:before, .note-list li a:before {
+  content: '';
+  position: absolute;
+  left: -1rem;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  background: var(--twoColor);
+  border-radius: 50%;
+  transform: translateY(-50%) scale(0);
+  transition: transform 0.3s ease;
+}
+
+.link-list li a:hover:before, .note-list li a:hover:before {
+  transform: translateY(-50%) scale(1);
+}
 /* Checkbox */
 
 li:has(input[type=checkbox]) {

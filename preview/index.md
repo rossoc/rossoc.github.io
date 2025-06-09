@@ -1,9 +1,7 @@
 ---
-layout: list
+layout: portfolio-list
 title: Preview
 ---
-
-## Instructions
 
 To navigate through the `Presentations`, you can use:
 - Top or bottom bar; 
@@ -14,5 +12,3 @@ Also:
 
 - `gg`: go to presentation's start.
 - `G`: go to presentation's end.
-
-## Presentations

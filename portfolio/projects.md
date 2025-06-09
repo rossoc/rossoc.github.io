@@ -23,7 +23,7 @@ title: Projects
 
 ---
 
-## [Somebody's Blog!](https://github.com/danesinoo/danesinoo.github.io)
+## [LogBook](https://github.com/danesinoo/danesinoo.github.io)
 
 - **Automated blog** to convert **Markdown to HTML** with **Rust** and **GitHub Actions**.
 - **Open Source** project for **personal notes**, **project management**, and
