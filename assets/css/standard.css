@@ -219,6 +219,11 @@ header a {
     color: var(--oneColor);
 }
 
+header a:hover {
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--oneColorHighlight);
+}
 header .avatar {
     margin-left: 1rem;
 }
