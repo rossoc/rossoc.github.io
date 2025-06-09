@@ -24,24 +24,24 @@
 
 /* Light Theme */
 [data-theme="light"] {
-    --backgroundColor: #EDE3E4;
-    --backgroundColorHighlight: #D5CCCD;
-    --textColor: #333;
-    --oneColor: #54151d;
-    --twoColor: #4c722f;
-    --oneColorHighlight: #691B25;
-    --twoColorHighlight: #608F3B;
+        --backgroundColor: #D5CCCD;
+        --backgroundColorHighlight: #EDE3E4;
+        --textColor: #333;
+        --oneColor: #691B25;
+        --twoColor: #4c722f;
+        --oneColorHighlight: #cc4d33;
+        --twoColorHighlight: #608F3B;
 }
 
 /* Dark Theme */
 [data-theme="dark"] {
-    --backgroundColor: #24283b;
-    --backgroundColorHighlight: #2E334B;
-    --textColor: #a9b1d6;
-    --oneColor: #ff862a;
-    --twoColor: #bb9af7;
-    --oneColorHighlight: #cc6b21;
-    --twoColorHighlight: #957bc5;
+        --backgroundColor: #24283b;
+        --backgroundColorHighlight: #2E334B;
+        --textColor: #a9b1d6;
+        --oneColor: #ff862a;
+        --twoColor: #bb9af7;
+        --oneColorHighlight: #cc6b21;
+        --twoColorHighlight: #957bc5;
 }
 
 :root {
@@ -204,7 +204,7 @@ header {
     text-align: center;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: stretch;
     border-bottom: 0.1rem solid var(--oneColor);
 
 }
@@ -222,42 +222,49 @@ header .avatar {
     margin-left: 1rem;
 }
 
-.avatar img {
+.avatar svg {
   height: 50px;
   width: auto;
   max-width: 200px;
-  border-radius: 50%;
 }
 
-#navbar {
-    margin-right: 1rem;
-}
-
-#navbar ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-end;
-    padding: 0;
-    margin: 1rem auto;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-#navbar a {
+#download {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    line-height: -1rem;
-    margin: 0;
-    padding: 0.5rem;
+    margin: auto 1rem auto 0;
+    padding: 0.7rem;
     background-color: var(--oneColor);
     color: var(--backgroundColor);
     line-height: 1;
+    height: 2.5rem;
 }
 
-#navbar a:hover {
-    padding: 0.5rem;
+#download:hover {
     background-color: var(--oneColorHighlight);
+}
+
+nav {
+    margin: auto;
+    flex-grow: 4;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  position: relative;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
 }
 
 table {

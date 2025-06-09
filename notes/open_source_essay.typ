@@ -9,8 +9,8 @@
     homepage: "danesinoo.github.io",
   ),
   entity: (
-    target: "European Commission",
-    name: "European Parliament",
+    target: "Christian Igel",
+    name: "DIKU Professor",
   ),
   title: [Open Source: an opportunity for Europe],
 )
