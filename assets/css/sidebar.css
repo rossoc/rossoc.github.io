@@ -7,22 +7,19 @@ body {
     grid-template-columns: 260px 1fr;
     grid-template-rows: 1fr auto;
     overflow-y: auto;
-    background-color: var(--backgroundColorHighlight);
+    background-color: var(--backgroundColor);
 }
 
 header {
     grid-area: h;
-    background-color: var(--backgroundColor);
 }
 
 main {
     grid-area: m;
-    background-color: var(--backgroundColorHighlight);
 }
 
 footer {
     grid-area: f;
-    background-color: var(--backgroundColor);
     border-top: 0.1rem solid var(--oneColor);
 }
 
@@ -38,7 +35,6 @@ sidebar {
     overflow-y: auto;
     font-size: 90%;
     border-right: 0.1rem solid var(--oneColor);
-    background-color: var(--backgroundColor);
 }
 
 /* Note sidebar styling */
@@ -46,7 +42,6 @@ sidebar {
     padding: 0.2rem;
     border-radius: var(--round-radius);
     transition: var(--transition);
-    background-color: var(--backgroundColor);
     list-style: none;
 }
 
@@ -66,7 +61,7 @@ sidebar {
 }
 
 .note-sidebar li a:visited {
-    color: var(--oneColor);
+    color: var(--textColor);
 }
 
 /* Responsive design for phones */

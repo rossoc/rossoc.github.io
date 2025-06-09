@@ -216,6 +216,7 @@ header > * {
 header a {
     font-weight: bold;
     text-decoration: none;
+    color: var(--backgroundColor);
 }
 
 header .avatar {
@@ -235,7 +236,6 @@ header .avatar {
     margin: auto 1rem auto 0;
     padding: 0.7rem;
     background-color: var(--oneColor);
-    color: var(--backgroundColor);
     line-height: 1;
     height: 2.5rem;
 }
