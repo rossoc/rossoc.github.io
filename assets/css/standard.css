@@ -49,7 +49,7 @@
     --border: solid var(--oneColor);
     --shadow: 0 0 0.4rem 0.01rem var(--oneColor);
     --transition: all 0.3s;
-
+    --animate-duration:1s;
 }
 
 /* --------- MOBILE BREAKPOINT --------- */
@@ -602,3 +602,21 @@ code {
     background-color: var(--backgroudnColorHighlight);
     font-family: 'Roboto', monospace;
 }
+
+.animate__animated{
+    -webkit-animation-duration:1s;
+    animation-duration:1s;
+    -webkit-animation-duration:var(--animate-duration);
+    animation-duration:var(--animate-duration);
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both
+}
+
+.animate__slideInUp{
+    -webkit-animation-name:slideInUp;
+    animation-name:slideInUp
+}
+
+@-webkit-keyframes slideInLeft{0%{-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0);visibility:visible}to{-webkit-transform:translateZ(0);transform:translateZ(0)}}@keyframes slideInLeft{0%{-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0);visibility:visible}to{-webkit-transform:translateZ(0);transform:translateZ(0)}}.animate__slideInLeft{-webkit-animation-name:slideInLeft;animation-name:slideInLeft}
+
+@-webkit-keyframes slideInUp{0%{-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0);visibility:visible}to{-webkit-transform:translateZ(0);transform:translateZ(0)}}@keyframes slideInUp{0%{-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0);visibility:visible}to{-webkit-transform:translateZ(0);transform:translateZ(0)}}.animate__slideInUp{-webkit-animation-name:slideInUp;animation-name:slideInUp}
