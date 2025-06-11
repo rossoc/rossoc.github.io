@@ -207,7 +207,6 @@ header {
     flex-direction: row;
     justify-content: stretch;
     border-bottom: 0.1rem solid var(--oneColor);
-
 }
 
 header > * {
@@ -225,6 +224,11 @@ header a:hover {
     text-decoration: none;
     color: var(--oneColorHighlight);
 }
+
+header a:active{
+  transform: scale(0.95);
+}
+
 header .avatar {
     margin-left: 1rem;
 }
@@ -282,17 +286,23 @@ nav a::after {
   content: '';
   position: absolute;
   bottom: 0;
-  right: 0; /* Start from the right instead of left */
+  right: 0;
   width: 0;
   height: 2px;
   background: var(--oneColor);
   transition: width 0.3s ease;
 }
 
+nav a.active::after {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
 nav a:hover::after {
   width: 100%;
-  left: 0; /* When hovered, stretch from left to right */
-  right: auto; /* Reset the right position */
+  left: 0;
+  right: auto;
 }
 
 table {
@@ -473,15 +483,6 @@ hr {
 
 .link-list li a, .note-list li a {
     position: relative;
-}
-
-.link-list li a:hover, .note-list li a:hover {
-    color: var(--twoColor);
-}
-
-
-.link-list li a:visited:hover, .note-list li a:visited:hover {
-    color: var(--oneColor);
 }
 
 .link-list li a:before, .note-list li a:before {

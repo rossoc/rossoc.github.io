@@ -1,14 +1,5 @@
 @media screen and (max-width: 700px) {
     :root {
-        --textSize: 0.5rem;
-        --heading1Size: 2rem;
-        --heading2Size: 1rem;
-        --heading3Size: 0.9rem;
-        --heading4Size: 0.8rem;
-        --shortContent: 100%;
-        --content: 100%;
-
-        --textSize: 0.7rem;
         --heading1Size: 1.5rem;
         --heading2Size: 1rem;
         --heading3Size: 0.8rem;
@@ -22,7 +13,6 @@
 
 @media screen and (min-width: 701px) and (max-width: 900px) {
     :root {
-        --textSize: 0.8rem;
         --heading1Size: 1.6rem;
         --heading2Size: 1.1rem;
         --heading3Size: 0.9rem;
@@ -36,7 +26,6 @@
 
 @media screen and (min-width: 901px) and (max-width: 1200px) {
     :root {
-        --textSize: 0.9rem;
         --heading1Size: 1.9rem;
         --heading2Size: 1.2rem;
         --heading3Size: 1rem;
@@ -50,7 +39,6 @@
 
 @media screen and (min-width: 1201px) {
     :root {
-        --textSize: 1rem;
         --heading1Size: 2rem;
         --heading2Size: 1.3rem;
         --heading3Size: 1.1rem;
@@ -60,8 +48,8 @@
     }
 }
 
-main {
-    font-size: var(--textSize);
+body * {
+    line-height: max(calc(var(--textSize) * 5 / 8), 20px);
 }
 
 h2 {
