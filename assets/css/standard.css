@@ -1,4 +1,4 @@
-@media (prefers-color-scheme: light) {
+[data-theme="light"], @media (prefers-color-scheme: light) {
     :root {
         --backgroundColor: #D5CCCD;
         --backgroundColorHighlight: #EDE3E4;
@@ -10,7 +10,7 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
+[data-theme="dark"], @media (prefers-color-scheme: dark) {
     :root {
         --backgroundColor: #24283b;
         --backgroundColorHighlight: #2E334B;
@@ -20,28 +20,6 @@
         --oneColorHighlight: #cc6b21;
         --twoColorHighlight: #957bc5;
     }
-}
-
-/* Light Theme */
-[data-theme="light"] {
-        --backgroundColor: #D5CCCD;
-        --backgroundColorHighlight: #EDE3E4;
-        --textColor: #333;
-        --oneColor: #691B25;
-        --twoColor: #4c722f;
-        --oneColorHighlight: #cc4d33;
-        --twoColorHighlight: #608F3B;
-}
-
-/* Dark Theme */
-[data-theme="dark"] {
-        --backgroundColor: #24283b;
-        --backgroundColorHighlight: #2E334B;
-        --textColor: #a9b1d6;
-        --oneColor: #ff862a;
-        --twoColor: #bb9af7;
-        --oneColorHighlight: #cc6b21;
-        --twoColorHighlight: #957bc5;
 }
 
 :root {
@@ -49,7 +27,7 @@
     --border: solid var(--oneColor);
     --shadow: 0 0 0.4rem 0.01rem var(--oneColor);
     --transition: all 0.3s;
-    --animate-duration:1s;
+    --animate-duration: 1s;
 }
 
 /* --------- MOBILE BREAKPOINT --------- */
@@ -293,13 +271,7 @@ nav a::after {
   transition: width 0.3s ease;
 }
 
-nav a.active::after {
-  width: 100%;
-  left: 0;
-  right: auto;
-}
-
-nav a:hover::after {
+nav a.active::after, nav a:hover::after {
   width: 100%;
   left: 0;
   right: auto;
@@ -612,11 +584,6 @@ code {
     animation-fill-mode:both
 }
 
-.animate__slideInUp{
-    -webkit-animation-name:slideInUp;
-    animation-name:slideInUp
-}
-
 @-webkit-keyframes slideInLeft{0%{-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0);visibility:visible}to{-webkit-transform:translateZ(0);transform:translateZ(0)}}@keyframes slideInLeft{0%{-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0);visibility:visible}to{-webkit-transform:translateZ(0);transform:translateZ(0)}}.animate__slideInLeft{-webkit-animation-name:slideInLeft;animation-name:slideInLeft}
 
-@-webkit-keyframes slideInUp{0%{-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0);visibility:visible}to{-webkit-transform:translateZ(0);transform:translateZ(0)}}@keyframes slideInUp{0%{-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0);visibility:visible}to{-webkit-transform:translateZ(0);transform:translateZ(0)}}.animate__slideInUp{-webkit-animation-name:slideInUp;animation-name:slideInUp}
+@-webkit-keyframes slideInUp{0%{-webkit-transform:translate3d(0,50%,0);transform:translate3d(0,50%,0);visibility:visible}to{-webkit-transform:translateZ(0);transform:translateZ(0)}}@keyframes slideInUp{0%{-webkit-transform:translate3d(0,50%,0);transform:translate3d(0,50%,0);visibility:visible}to{-webkit-transform:translateZ(0);transform:translateZ(0)}}.animate__slideInUp{-webkit-animation-name:slideInUp;animation-name:slideInUp}

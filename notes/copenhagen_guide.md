@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: note
 title: Guide to Moving to Copenhagen as a European Student
 ---
 

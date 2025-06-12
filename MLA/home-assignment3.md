@@ -1,5 +1,5 @@
 ---
-layout: note-0.1
+layout: note-sidebar
 title: Home Assignment 3  
 category: MLA  
 ---

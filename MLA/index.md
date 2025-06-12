@@ -1,4 +1,4 @@
 ---
-layout: note-list
+layout: note-sidebar
 title: MLA
 ---

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: note
 title: Open Source: The Key to Europe’s Innovation and Sovereignty
 ---
 

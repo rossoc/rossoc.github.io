@@ -1,5 +1,5 @@
 --- 
-layout: page
+layout: note
 title: Open Source: un'opportunità per l'Italia 
 ---
 

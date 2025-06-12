@@ -71,8 +71,11 @@ fn make_links(links: &Vec<(PathBuf, PathBuf)>) -> String {
 /// - dirs: a tuple (source, destination)
 /// - vars: HashMap to replace the placeholders `{{ <key> }}`
 pub fn make_page(dirs: (&PathBuf, PathBuf), vars: &HashMap<&str, String>) -> Result<(), Error> {
-    let content = read_to_string(&dirs.0)?;
-    match to_html(&content, &vars) {
+    let content = match read_to_string(&dirs.0) {
+        Ok(c) => Ok(c),
+        Err(_) => Err(Error::MissingFile(dirs.0.clone())),
+    };
+    match to_html(&content?, &vars) {
         Ok(content) => Ok(write(&dirs.1, content)?),
         Err(Error::MissingLayoutGeneric) => Err(Error::MissingLayout(path_to_str(dirs.0))),
         Err(Error::SettingsNotFoundGeneric) => Err(Error::SettingsNotFound(path_to_str(dirs.0))),

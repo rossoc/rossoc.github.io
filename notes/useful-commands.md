@@ -1,5 +1,5 @@
 --- 
-layout: page
+layout: note
 title: Command Line to Remember 
 ---
 

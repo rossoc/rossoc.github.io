@@ -1,5 +1,5 @@
 ---
-layout: portfolio-list
+layout: note-sidebar
 title: Preview
 ---
 

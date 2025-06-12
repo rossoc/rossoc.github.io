@@ -1,5 +1,5 @@
 --- 
-layout: portfolio
+layout: note-bottom
 title: Experience 
 ---
 

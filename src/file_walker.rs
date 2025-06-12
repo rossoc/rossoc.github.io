@@ -74,7 +74,10 @@ pub fn read_layout(name: &str) -> Result<String, Error> {
     let mut path = PathBuf::from("layout");
     path.canonicalize()?;
     path.push(name.to_string() + ".html");
-    Ok(read_to_string(path)?)
+    match read_to_string(path) {
+        Ok(layout) => Ok(layout),
+        Err(_) => Err(Error::MissingLayout(name.to_string())),
+    }
 }
 
 /// Copy all the files in the source directory to the destination.

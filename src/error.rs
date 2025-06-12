@@ -1,4 +1,4 @@
-use std::path::StripPrefixError;
+use std::path::{PathBuf, StripPrefixError};
 use thiserror::Error;
 
 #[derive(Error, Debug)]
@@ -17,6 +17,8 @@ pub enum Error {
     SettingsNotFound(String),
     #[error("Content section not found in note: {0}")]
     ContentNotFound(String),
+    #[error("Missing File {0}")]
+    MissingFile(PathBuf),
     #[error("parser::compute_out, unreachable error: {0}")]
     SplitPrefixUnreachable(StripPrefixError),
 }
