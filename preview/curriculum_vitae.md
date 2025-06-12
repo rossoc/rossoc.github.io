@@ -24,9 +24,9 @@ enjoyment.
 
 ---
 
-## Professional Experience - 1
+## Machine Learning Intern
+#### Professional Experience - 1
 
-#### Machine Learning Intern
 from July 2024 to August 2024,  
 at University of Padua, Italy  
 - Conducted research on **sentiment analysis** using machine learnign models.
@@ -35,9 +35,9 @@ at University of Padua, Italy
 
 ---
 
-## Professional Experience - 2
+## Front Office Assistant
+#### Professional Experience - 2
 
-#### Front Office Assistant
 from August 2023 to November 2023,  
 at University of Padua, Italy
 - Responsabilities included **data processing support**, **front office
@@ -47,9 +47,9 @@ tasks**, and **archiving**.
 
 ---
 
-## Professional Experience - 3
+## Exchange Student
+#### Professional Experience - 3
 
-#### Exchange Student
 from August 2019 to May 2020,  
 at Rødkilde Gymnasium, Denmark
 
@@ -60,9 +60,9 @@ at Rødkilde Gymnasium, Denmark
 
 ---
 
-## Professional Experience - 4
+## Mechanical Worker
+#### Professional Experience - 4
 
-#### Mechanical Worker
 from June 2019 to July 2019,  
 at TPA Srl, Motta di Livenza, Italy  
 
@@ -71,9 +71,9 @@ at TPA Srl, Motta di Livenza, Italy
 
 ---
 
-## Education - 1
+## Master of Science in Computer Science
+#### Education - 1
 
-#### Master of Science in Computer Science
 from September 2024 and still ongoing,  
 at University of Copenhagen, Denmark
 
@@ -82,9 +82,10 @@ at University of Copenhagen, Denmark
 
 ---
 
-## Education - 2
 
-#### Bachelor of Science in Computer Science
+## Bachelor of Science in Computer Science
+#### Education - 2
+
 from September 2021 to September 2024,  
 at University of Padua, Italy
   
@@ -95,9 +96,9 @@ at University of Padua, Italy
 
 ---
 
-## Projects - 1
 
-#### Easy Meal
+## Easy Meal
+#### Projects - 1
 
 - **Web application** designed to streamline restaurant reservations and order.
 - Collaborated in a team of developers (**6 students**).
@@ -108,9 +109,8 @@ at University of Padua, Italy
 
 ---
 
-## Projects - 2
-
-#### Music vs Robot
+## Music vs Robot
+#### Projects - 2
 
 - Designed and developed a **tower-defense-style game**.
 - Used **C++14** and the **Qt framework**.
@@ -122,9 +122,9 @@ at University of Padua, Italy
 
 ---
 
-## Skills - 1
 
-#### Machine Learning
+## Machine Learning
+#### Skills - 1
 
 - TensorFlow
 - PyTorch
@@ -135,9 +135,9 @@ at University of Padua, Italy
 
 ---
 
-## Skills - 2
 
-#### Programming
+## Programming
+#### Skills - 2
 
 - Functional Programming
 - Object-Oriented Programming
@@ -181,9 +181,9 @@ at University of Padua, Italy
 
 ---
 
-## Interests - 1
+# Sports
+#### Interests - 1
 
-#### Sports
 
 - **Judo**: I practiced judo for 15 years, reaching the brown belt.
 - **Sailing**: I have been sailing since I was a child, every summer.
@@ -193,7 +193,7 @@ at University of Padua, Italy
 
 ---
 
-## Interests - 2
+#### Interests - 2
 
 - **Reading**: while I sail, I read a lot of books, in particular, I like
   science fiction and fantasy.
@@ -211,7 +211,7 @@ at University of Padua, Italy
 
 <ul id="home-links">
         <li>
-            <a href="https://danesinoo.github.io/preview/about_me.html"> About Me</a>
+            <a href="https://danesinoo.github.io/portfolio/about_me.html"> About Me</a>
             </a>
         </li>
 </ul>

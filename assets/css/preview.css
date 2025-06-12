@@ -1,3 +1,27 @@
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+    :root {
+        --heading1Size: 3rem;
+        --heading2Size: 2.2rem;
+        --heading3Size: 2rem;
+        --heading4Size: 1.9rem;
+        --shortContent: 42%;
+        --content: 80%;
+    }
+}
+
+/* --------- BIG SCREEN BREAKPOINT --------- */
+
+@media screen and (min-width: 1201px) {
+    :root {
+        --heading1Size: 3.5rem;
+        --heading2Size: 2.5rem;
+        --heading3Size: 2.3rem;
+        --heading4Size: 2.1rem;
+        --shortContent: 36%;
+        --content: 70%;
+    }
+}
+
 :root {
     --decorations-width: 14px;
 }
@@ -33,10 +57,11 @@ hr {
 	height: var(--decorations-width);
 }
 
-body main { /* // *:not(hr, h1, h2, h3, h4) { */
+body main, main p { /* // *:not(hr, h1, h2, h3, h4) { */
     max-width: var(--content);
     margin: 0 auto;
     font-size: 2rem;
+    line-height: 3rem;
 }
 
 img, video {

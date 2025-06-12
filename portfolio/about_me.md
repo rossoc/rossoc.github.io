@@ -1,5 +1,5 @@
 --- 
-layout: note-bottom
+layout: short-note-bottom
 title: About 
 ---
 

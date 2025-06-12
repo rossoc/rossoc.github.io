@@ -61,6 +61,7 @@ fn make_links(links: &Vec<(PathBuf, PathBuf)>) -> String {
         .iter()
         .filter(|(from, to)| file_name(to) != "index.html" && file_name(from) != "")
         .filter_map(|dir| make_link(dir).ok())
+        .rev()
         .fold(String::new(), |acc, link| acc + &link)
 }
 
