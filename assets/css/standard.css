@@ -1,4 +1,4 @@
-@media (prefers-color-scheme: light), [data-theme="light"] {
+@media (prefers-color-scheme: light)[data-theme="light"] {
     :root {
         --backgroundColor: #D5CCCD;
         --backgroundColorHighlight: #EDE3E4;
@@ -10,7 +10,7 @@
     }
 }
 
-@media (prefers-color-scheme: dark), [data-theme="dark"] {
+@media (prefers-color-scheme: dark) {
     :root {
         --backgroundColor: #24283b;
         --backgroundColorHighlight: #2E334B;
@@ -20,6 +20,54 @@
         --oneColorHighlight: #cc6b21;
         --twoColorHighlight: #957bc5;
     }
+}
+
+[data-theme="light"] {
+    --backgroundColor: #D5CCCD;
+    --backgroundColorHighlight: #EDE3E4;
+    --textColor: #333;
+    --oneColor: #691B25;
+    --twoColor: #4c722f;
+    --oneColorHighlight: #cc4d33;
+    --twoColorHighlight: #608F3B;
+}
+
+[data-theme="dark"] {
+    --backgroundColor: #24283b;
+    --backgroundColorHighlight: #2E334B;
+    --textColor: #a9b1d6;
+    --oneColor: #ff862a;
+    --twoColor: #bb9af7;
+    --oneColorHighlight: #cc6b21;
+    --twoColorHighlight: #957bc5;
+}
+
+@font-face {
+  font-family: "HKGrotesk";
+  src: url('../font/HKGrotesk-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HKGrotesk";
+  src: url('../font/HKGrotesk-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "HKGrotesk";
+  src: url('../font/HKGrotesk-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HKGrotesk";
+  src: url('../font/HKGrotesk-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
 }
 
 :root {
@@ -79,7 +127,7 @@
 * {
     box-sizing: border-box;
     line-height: calc(1.5 * var(--textSize));
-    font-family: 'Roboto', sans-serif;
+    font-family: 'HKGrotesk', 'Roboto', sans-serif;
 }
 
 *:not(html, body, footer, header, main) {
@@ -191,14 +239,6 @@ main p {
     font-size: var(--textSize);
 }
 
-footer {
-    text-align: center;
-}
-
-footer > * {
-    margin: 0 auto;
-}
-
 /* --------- COMPONENTS --------- */
 .avatar {
     margin: 0 1rem;
@@ -295,9 +335,10 @@ blockquote p {
 }
 
 code {
-    text-size: 90%;
-    padding: 0 0.5 rem;
-    background-color: var(--backgroudnColorHighlight);
+    font-size: 90%;
+    padding: 0.1rem 0.3rem;
+    border-radius: calc(var(--round-radius) / 2);
+    background-color: var(--backgroundColorHighlight);
     font-family: 'Roboto', monospace;
 }
 
@@ -374,6 +415,64 @@ code {
     }
 }
 
+table {
+    margin: 0 auto;
+	border:thin solid var(--textColor);
+	border-collapse:collapse;
+	padding:0.4rem;
+    width: 100%;
+}
+
+table th {
+    padding: 0.8rem;
+    background-color: var(--oneColor);
+    color: var(--backgroundColor);
+    font-weight: bold;
+}
+
+table td {
+    padding: 0.8rem;
+    border-bottom: 0.1rem solid var(--textColor);
+    border-right: 0.1rem solid var(--textColor);
+}
+
+table th:last-of-type, table td:last-of-type {
+    border-right: none;
+}
+
+table tr:last-of-type td {
+    border-bottom: none;
+}
+
+table tr:nth-of-type(even) {
+    background-color: rgba(var(--threeColor-rgb), 1);
+}
+
+table td a {
+    padding: 0.3rem;
+}
+
+p:has(img) {
+    text-align: center;
+}
+
+img, video {
+    max-width: var(--content);
+    height: auto;
+    margin: 0.5rem auto;
+    border-radius: var(--round-radius);
+}
+
+@media screen and (max-width: 600px) {
+    table th, table td {
+        padding: 0.5rem 0.1rem;
+    }
+
+    table th:first-of-type, table td:first-of-type {
+        display: none;
+    }
+}
+
 /* --------- HOMEPAGE SPECIFIC --------- */
 
 #home-main {
@@ -409,6 +508,7 @@ code {
 }
 
 .socials {
+    transition: var(--transition);
     list-style: none;
     display: flex;
     justify-content: center;
@@ -423,7 +523,6 @@ code {
     text-decoration: none;
     color: var(--oneColor);
     padding: 0.4rem;
-    transition: var(--transition);
     font-weight: bold;
     text-align: center;
 }
@@ -489,6 +588,10 @@ ul.bottom-page {
     text-align: left;
 }
 
+.bottom-page li:nth-child(2) a {
+    text-align: right;
+}
+
 .bottom-page a br {
     display: none;
 }
@@ -502,17 +605,17 @@ ul.bottom-page {
     flex-direction: column;
     margin: 0rem 2rem 0 2rem;
     font-size: var(--heading2Size);
-    line-height: calc(var(--heading2Size) * 3 / 2);
 }
 
 .link-list li a {
     position: relative;
+    padding: calc(var(--textSize));
 }
 
 .link-list li a:before {
   content: '';
   position: absolute;
-  left: -1rem;
+  left: calc(-1 * var(--textSize) / 40);
   top: 50%;
   width: 6px;
   height: 6px;
@@ -539,3 +642,81 @@ ul.bottom-page {
     }
 }
 
+/* --------- FOOTER STYLES --------- */
+footer {
+    background: var(--backgroundColorHighlight);
+    border-top: var(--border);
+    justify-content: center;
+}
+
+footer > * {
+    margin-left: var(--heading1Size);
+}
+
+footer .content {
+    display: flex;
+    flex-direction: row;
+    margin: var(--heading1Size) calc(2 * var(--heading1Size));
+    gap: calc(7 * var(--heading1Size));
+}
+
+footer .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: calc(2 * var(--heading1Size));
+}
+
+footer .logo .website-pic svg {
+    height: calc(4 * var(--heading1Size));
+    color: var(--oneColor);
+    transition: var(--transition);
+}
+
+footer .logo .website-pic:hover svg {
+    color: var(--oneColorHighlight);
+}
+
+footer .menu {
+    font-size: var(--heading1Size);
+    font-weight: bold;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--heading1Size) * 5 / 6);
+    margin: auto 0;
+}
+
+footer .name {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--oneColor);
+    background: var(--backgroundColorHighlight);
+    border: 0;
+    padding: 0;
+    font-size: calc(var(--heading1Size) * 3.5);
+    font-weight: bold;
+}
+
+footer .name:hover {
+    cursor: pointer;
+}
+
+footer .name p {
+    margin: calc(var(--heading1Size) * 2) 0;
+}
+
+footer .name svg {
+    height: calc(var(--heading1Size) * 2.5);
+    border-radius: 100%;
+    transition: var(--transition);
+}
+
+footer .name svg:hover {
+    color: var(--backgroundColorHighlight);
+    background: var(--oneColor);
+    border: 0.2rem solid var(--oneColor);
+}

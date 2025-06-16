@@ -17,20 +17,17 @@ document.addEventListener("DOMContentLoaded", function() {
         throwOnError: false,
     });
 
-    navbar_active_toggle()
-
+    navbar_active_toggle(true)
     nav = document.getElementById("navbar")
-
     nav.addEventListener('mouseenter', () => {
-        navbar_active_toggle()
+        navbar_active_toggle(false)
     })
-
     nav.addEventListener('mouseleave', () => {
-        navbar_active_toggle()
+        navbar_active_toggle(true)
     })
 })
 
-function navbar_active_toggle() {
+function navbar_active_toggle(flag) {
     const currentPath = window.location.pathname.replace(/\/index\.html$/, '').replace(/\/$/, '')
     const currentPage = currentPath.split('/').pop() || 'index'
 
@@ -39,7 +36,14 @@ function navbar_active_toggle() {
     navLinks.forEach(link => {
         const linkPage = link.getAttribute('href')
         if (linkPage.replace(/\/$/, '') === currentPage.replace(/\/$/, '')) {
-            link.classList.toggle('active')
+            flag ? link.classList.add('active') : link.classList.remove('active')
         }
     })
+}
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 }

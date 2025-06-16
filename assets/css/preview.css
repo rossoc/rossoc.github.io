@@ -57,9 +57,14 @@ hr {
 	height: var(--decorations-width);
 }
 
-body main, main p { /* // *:not(hr, h1, h2, h3, h4) { */
+body main { /* // *:not(hr, h1, h2, h3, h4) { */
     max-width: var(--content);
     margin: 0 auto;
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+main p {
     font-size: 2rem;
     line-height: 3rem;
 }

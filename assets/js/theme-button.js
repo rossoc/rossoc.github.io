@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const button = document.getElementById("theme-button");
 
     function toggleTheme() {
         const currentTheme = document.documentElement.getAttribute("data-theme");
@@ -17,12 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function applyStoredTheme() {
-        const storedTheme = localStorage.getItem("theme") || 
+        const storedTheme = localStorage.getItem("theme") ||
             (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 
         document.documentElement.setAttribute("data-theme", storedTheme);
     }
 
     applyStoredTheme();
-    button.addEventListener("click", toggleTheme);
+    const button = document.getElementById("theme-button");
+    button ? button.addEventListener("click", toggleTheme) : null
 });

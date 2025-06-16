@@ -6,3 +6,10 @@ document.addEventListener('mousemove', (e) => {
 
     card.style.transform = `perspective(1000px) rotateY(${x}deg) rotateX(${y}deg)`;
 });
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
