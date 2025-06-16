@@ -204,15 +204,3 @@ at University of Padua, Italy
   Mostly on the rap side, but I get bored easily.
 - **Curiousity**: I am curious and **eager to learn** about everything, this is
   pretty much my way of living and enjoying life.
-
----
-
-## Let's Connect!
-
-<ul id="home-links">
-        <li>
-            <a href="https://danesinoo.github.io/portfolio/about_me.html"> About Me</a>
-            </a>
-        </li>
-</ul>
-
