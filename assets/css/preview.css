@@ -57,7 +57,7 @@ hr {
 	height: var(--decorations-width);
 }
 
-body main { /* // *:not(hr, h1, h2, h3, h4) { */
+body main .content { /* // *:not(hr, h1, h2, h3, h4) { */
     max-width: var(--content);
     margin: 0 auto;
     font-size: 2rem;
@@ -127,4 +127,8 @@ ul li, ol li {
     .dark {
         display: none;
     }
+}
+
+footer .menu {
+    gap: 0;
 }

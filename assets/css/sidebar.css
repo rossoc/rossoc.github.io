@@ -6,7 +6,6 @@ body {
     "f f";
     grid-template-columns: 260px 1fr;
     grid-template-rows: 1fr auto;
-    overflow-y: auto;
     background-color: var(--backgroundColor);
 }
 
@@ -20,7 +19,6 @@ main {
 
 footer {
     grid-area: f;
-    border-top: 0.1rem solid var(--oneColor);
 }
 
 sidebar {
@@ -30,6 +28,9 @@ sidebar {
     font-size: 90%;
     border-right: var(--border);
     animation: slideInLeft var(--animate-duration) ease-out;
+    z-index: 10;
+    background: var(--backgroundColor);
+    border-bottom: var(--border);
 }
 
 

@@ -51,7 +51,7 @@
 
 @font-face {
   font-family: "HKGrotesk";
-  src: url('../font/HKGrotesk-Italic.ttf') format('truetype');
+  src: url('../font/HKGrotesk-MediumItalic.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
 }
@@ -135,9 +135,8 @@
 }
 
 body {
-    background-color: var(--backgroundColor);
+    background-color: var(--backgroundColorHighlight);
     color: var(--textColor);
-    min-height: 100vh;
     margin: 0;
 }
 
@@ -203,6 +202,9 @@ header {
     flex-direction: row;
     justify-content: space-between;
     border-bottom: var(--border);
+    background: var(--backgroundColor);
+    z-index: 10;
+    position: relative;
 }
 
 header > * {
@@ -224,15 +226,21 @@ header a:active {
 }
 
 main {
+    width: 100%;
+    animation: slideInUp var(--animate-duration) ease-out;
+    background-color: var(--backgroundColor);
+    border-bottom: var(--border);
+    z-index: 10;
+    position: relative;
+    min-height: 100vh;
+}
+
+.content {
     margin: 0 auto;
     padding: var(--textSize);
-    max-width: var(--content);
-    background-color: var(--backgroundColor);
-    border-radius: var(--round-radius);
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    animation: slideInUp var(--animate-duration) ease-out;
+    width: var(--content);
 }
 
 main p {
@@ -645,8 +653,10 @@ ul.bottom-page {
 /* --------- FOOTER STYLES --------- */
 footer {
     background: var(--backgroundColorHighlight);
-    border-top: var(--border);
     justify-content: center;
+    position: sticky;
+    left: 0;
+    bottom: 0;
 }
 
 footer > * {
@@ -658,6 +668,8 @@ footer .content {
     flex-direction: row;
     margin: var(--heading1Size) calc(2 * var(--heading1Size));
     gap: calc(7 * var(--heading1Size));
+    padding: 0;
+    min-height: 0;
 }
 
 footer .logo {

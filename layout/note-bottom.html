@@ -8,16 +8,18 @@
 <body>
     use navbar
     <main>
-        <h1> {{ title }} </h1>
-        {{ content }}
-        <hr>
-        <ul class="bottom-page">
-            <li><a href="{{ previous-page }}"> &larr; PREV <br> {{ previous-page-title }}
-                </a>
-            </li>
-            <li><a href="{{ next-page }}"> NEXT &rarr; <br> {{ next-page-title }} </a>
-            </li>
-        </ul>
+        <div>
+            <h1> {{ title }} </h1>
+            {{ content }}
+            <hr>
+            <ul class="bottom-page">
+                <li><a href="{{ previous-page }}"> &larr; PREV <br> {{ previous-page-title }}
+                    </a>
+                </li>
+                <li><a href="{{ next-page }}"> NEXT &rarr; <br> {{ next-page-title }} </a>
+                </li>
+            </ul>
+        </div>
     </main>
     use footer
 </body>
