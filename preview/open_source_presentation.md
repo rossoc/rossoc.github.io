@@ -137,10 +137,3 @@ invest in Open Source projects.
 - **Recap of Key Points** Summarize the strategic importance of investing in 
     Open Source.
 - **Final Thoughts**: Emphasize the potential long-term benefits.
-
-<ul id="home-links">
-        <li>
-            <a href="portfolio">Contacts</a>
-            </a>
-        </li>
-</ul>

@@ -1,6 +1,6 @@
 ---
 layout: note
-title: Guide to Moving to Copenhagen as a European Student
+title: Guide for Moving to Copenhagen
 ---
 
 This guide is intended to help with moving to Copenhagen. I hope it will be useful in the future if I move to another city as a starting point.

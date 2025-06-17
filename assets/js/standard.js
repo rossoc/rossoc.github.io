@@ -25,7 +25,23 @@ document.addEventListener("DOMContentLoaded", function() {
     nav.addEventListener('mouseleave', () => {
         navbar_active_toggle(true)
     })
+
+    const back_to_top = document.getElementById("back-to-top")
+    back_to_top.addEventListener('mouseenter', () => {
+        back_to_top_active_toggle(true)
+    })
+    back_to_top.addEventListener('mouseleave', () => {
+        back_to_top_active_toggle(false)
+    })
 })
+
+function back_to_top_active_toggle(flag) {
+    const normal = document.getElementById('back-to-top-regular');
+    const hover = document.getElementById('back-to-top-hover');
+
+    flag ? normal.classList.add('hover') : normal.classList.remove('hover')
+    flag ? hover.classList.remove('hover') : hover.classList.add('hover')
+}
 
 function navbar_active_toggle(flag) {
     const currentPath = window.location.pathname.replace(/\/index\.html$/, '').replace(/\/$/, '')

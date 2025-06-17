@@ -1,6 +1,6 @@
 ---
 layout: note
-title: Open Source: The Key to Europe’s Innovation and Sovereignty
+title: Open Source for European Sovereignty
 ---
 
 Open Source projects offer a compelling model for sharing software and fostering 
