@@ -5,22 +5,13 @@ title: Command Line to Remember
 
 ## GitHub
 
-1. `git clean -f` - Removes Unstaged UnTracked files ONLY [Type 1]
-1. `git checkout .` - Removes Unstaged Tracked files ONLY [Type 2]
-1. `git reset --hard` - Removes Staged Tracked and UnStaged Tracked files ONLY[Type 2, Type 3]
-1. `git stash -u` - Removes all changes [Type 1, Type 2, Type 3]
+1. `git clean -f` - Removes Unstaged UnTracked files
+1. `git checkout .` - Removes Unstaged Tracked files
+1. `git reset --hard` - Removes Staged Tracked and UnStaged Tracked
+1. `git stash -u` - Removes all changes
 
-- `git commit --amend [--no-edit]` - Adds the staged file into the last commit [without changing the message]
-- `git fetch --prune` - updates the list of remote branches and remove any references to branches that have been deleted on the remote.
-
-## Docker
-
-- `docker compose up -d --build` — if necessary, it recreates the images and
-  run the containers 
-- `docker compose stop` — stops the containers, the images are preserved
-- `docker compose down --rmi all` - remove the containers and deletes the images
-- `docker compose restart` — the images are unchanged, (i.e. `up` followed by `down`)
-- `docker compose exec -it <service> <command>` — if command is `bash`, you enter the container
+- `git stash pop` - Reapply the changes that were removed with `git stash`
+- `git commit --amend` - Adds the staged file into the last commit
 
 ## UV
 
