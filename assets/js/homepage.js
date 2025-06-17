@@ -1,10 +1,14 @@
-document.addEventListener('mousemove', (e) => {
-    const card = document.getElementById('home-main')
-    const rect = card.getBoundingClientRect();
-    const x = (e.clientX - rect.left - rect.width / 2) / 40;
-    const y = -(e.clientY - rect.top - rect.height / 2) / 40;
+document.addEventListener("DOMContentLoaded", function() {
+    if (getDeviceType() === "Desktop") {
+        document.addEventListener('mousemove', (e) => {
+            const card = document.getElementById('home-main')
+            const rect = card.getBoundingClientRect();
+            const x = (e.clientX - rect.left - rect.width / 2) / 40;
+            const y = -(e.clientY - rect.top - rect.height / 2) / 40;
 
-    card.style.transform = `perspective(1000px) rotateY(${x}deg) rotateX(${y}deg)`;
+            card.style.transform = `perspective(1000px) rotateY(${x}deg) rotateX(${y}deg)`;
+        })
+    }
 
     const back_to_top = document.getElementById("back-to-top")
     back_to_top.addEventListener('mouseenter', () => {
@@ -28,5 +32,17 @@ function scrollToTop() {
         top: 0,
         behavior: 'smooth'
     });
+}
+
+function getDeviceType() {
+    const userAgent = navigator.userAgent;
+    const width = window.innerWidth;
+    if (/Mobi|Android/i.test(userAgent) || width <= 768) {
+        return "Mobile";
+    } else if (/Tablet|iPad/i.test(userAgent) || (width > 768 && width <= 1024)) {
+        return "Tablet";
+    } else {
+        return "Desktop";
+    }
 }
 

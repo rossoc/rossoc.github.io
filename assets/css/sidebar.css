@@ -31,6 +31,7 @@ sidebar {
     z-index: 10;
     background: var(--backgroundColor);
     border-bottom: var(--border);
+    max-width: 100vw;
 }
 
 

@@ -1,6 +1,6 @@
 ---
 layout: preview
-title: How Open Source can start 3.0 Industrial Revolution in Europe
+title: Open Source for Europen Sovereignty
 ---
 
 Open Source projects offer a compelling model for sharing software and fostering
