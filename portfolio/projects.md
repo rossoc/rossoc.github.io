@@ -3,6 +3,13 @@ layout: short-note-bottom
 title: Projects 
 ---
 
+## [Weav](https://www.weav.it)
+
+- **Social media** to discover and advertise social **events**, pubs, and coffees.
+- Engineered a scalable backend in **Python** with **Django** and **Docker**.
+
+---
+
 ## [Easy Meal](https://github.com/Project-SWEnergy/Easy-Meal)
 
 - **Web application** to streamline restaurant reservations and orders.
@@ -30,3 +37,4 @@ title: Projects
   journaling.
 - Because keeping a daily logbook while working is incredibly useful.
 - This website is based on such software.
+

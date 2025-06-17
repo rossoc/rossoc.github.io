@@ -15,15 +15,6 @@ at University of Padua, Italy
 
 ---
 
-## Software Engineer
-from July 2022 to August 2023,  
-at [Weav](https://www.weav.it), Padua, Italy
-
-- **Social media** to discover and advertise social **events**, pubs, and coffees.
-- Engineered a scalable backend in **Python** with **Django** and **Docker**.
-
----
-
 ## Front Office Assistant
 from August 2023 to November 2023,  
 at University of Padua, Italy

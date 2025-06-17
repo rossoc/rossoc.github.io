@@ -14,21 +14,12 @@ opportunity for Europe](notes/open_source).
 
 ---
 
-# Investing in Open Source Projects: A Strategic Opportunity for Europe
+# Open Source for European Sovereignty
 
-## Enhancing Collaboration, Innovation, and Economic Growth
+### Enhancing Collaboration, Innovation, and Economic Growth
 
-This is my idea, therefore I am the author.  
-The contact information are available at the end of the presentation.
-
----
-
-# Introduction
-
-## The significance of Open Source in modern software development
-
-The goal of the presentation is to highlight the reasons why Europe should
-invest in Open Source projects.
+- This is my idea, therefore I am the founder.  
+- The presentation aims to highlight why Europe needs to invest in Open Source.
 
 ---
 
@@ -45,11 +36,11 @@ invest in Open Source projects.
 
 ---
 
-# The Current Open Source Landscape
+# Current Open Source Landscape
 
-- **Global Prevalence**: Majority of projects hosted on platforms like GitHub.
+- **Global Prevalence**: Majority of projects hosted on GitHub.
 - **Dominance of Non-European Entities**: Influence of companies like Microsoft 
-    (owner of GitHub), Google, and Meta.
+    (owner of GitHub), Google, and Meta, ...
 - **Risks**: Potential misuse of European intellectual property.
 
 ---
@@ -58,7 +49,7 @@ invest in Open Source projects.
 
 - **Resource Efficiency**: Shared development reduces duplicate efforts.
 - **Accelerated Innovation**: Collective expertise enhances software quality.
-- **Customization**: Ability to adapt shared libraries to specific platforms.
+- **Flexibility**: Ability to adapt shared libraries to specific platforms.
 
 ---
 
@@ -66,8 +57,7 @@ invest in Open Source projects.
 
 - **Management Complexity**: Difficulties in coordinating multiple contributors.
 - **Funding Limitations**: Reliance on volunteer maintainers.
-- **Risk of Monopolization**: Large companies influencing project directions 
-    for their benefit.
+- **Risk of Monopolization**: Small companies have limited resources to allocate.
 
 ---
 
@@ -75,46 +65,21 @@ invest in Open Source projects.
 
 - **European Investment**: Funding deserving Open Source projects.
 - **Hiring Maintainers**: Professional oversight to guide development.
-- **Developing a European Platform**: Enhance data management and IP protection.
+- **Developing a European Platform**: Independence from US platforms.
 
 ---
 
 # Funding Mechanisms
-- **Issue-Based Funding**: Funds allocated based on issues opened by European 
-    companies.
-- **Voting System**: Companies vote on projects/issues, weighted by employee 
-    count.
+- **Issue-Based Funding**: European companies propose their issues.
+- **Voting System**: European Companies vote on projects/issues.
 - **Alignment with Demand**: Ensures funding reflects actual needs.
 
 ---
 
 # Why This Funding Model Works
 - **Demand-Driven**: Focuses on projects that matter most to stakeholders.
-- **Fair Resource Allocation**: Proportional influence prevents dominance by 
-    any single entity.
+- **Fair Distribution**: Fostering small companies towards open source.
 - **Incentivizes Quality**: Maintainers motivated to resolve high-priority issues.
-
----
-
-# Utilization of Funds
-- **Salaries for Maintainers**: Support for professionals residing in Europe.
-- **Project Management Expenses**: Cover operational costs on a monthly basis.
-- **Efficiency Measures**: Time-limited funding to encourage prompt use.
-
----
-
-# Managing Intellectual Property
-- **Clear Licensing Agreements**: Establishing rights and obligations upfront.
-- **Protection of European IP**: Ensuring contributors' work is safeguarded.
-- **Facilitating Research**: Balancing openness with IP preservation.
-
----
-
-# Preventing Monopolies
-- **Robust Voting System**: Transparent and fair decision-making processes.
-- **Inclusive Governance**: Representation from SMEs, public entities, and 
-    individuals.
-- **Policy Framework**: Rules to prevent disproportionate control.
 
 ---
 
@@ -122,18 +87,5 @@ invest in Open Source projects.
 - **Enhanced IT Infrastructure**: Building a robust technological foundation.
 - **Fostering Tech Culture**: Encouraging collaboration and innovation.
 - **Economic Advantages**: Cost savings and better resource allocation.
-
----
-
-# Call to Action
-- **Stakeholder Engagement**: Encourage companies and entities to support the 
-    initiative.
-- **Next Steps**: Outline a roadmap for implementation.
-- **Invitation for Collaboration**: Open doors for feedback and participation.
-
----
-
-# Conclusion
-- **Recap of Key Points** Summarize the strategic importance of investing in 
-    Open Source.
-- **Final Thoughts**: Emphasize the potential long-term benefits.
+- **European Sovereignty**: Reducing independence from US platforms.
+- **AI**: High quality source code can be used to train high quality AIs.

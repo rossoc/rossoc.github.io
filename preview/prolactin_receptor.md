@@ -28,27 +28,3 @@ The protein is very big, so it is divided in three:
 # Divide-and-Conquer approach
 
 ![protein](assets/img/fl-prlr.jpeg)
-
----
-
-# Why this approach
-
-- Difficult dimerization
-
----
-
-# TDM with NMR spectroscopy
-
----
-
-# ECD with SAXS
-
-# relate to methods/results/conclusions you do not understand in the paper
-
----
-
-# relating to the paper and that you know the answer to (but they may not)
-
----
-
-# questions on the use of methods in relation to integrative structural biology
