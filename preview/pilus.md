@@ -4,6 +4,8 @@ title: Structure and Assembly of the Enterohemorrhagic Escherichia coli Type 4 P
 ---
 
 Pictures from the paper on Integrative and Structural Biology's exams.
+The pictures were extracted from the following paper:
+[Bardiaux, Benjamin, et al. "Structure and assembly of the enterohemorrhagic Escherichia coli type 4 pilus." Structure 27.7 (2019): 1082-1093](https://www.sciencedirect.com/science/article/pii/S0969212619301170).
 
 ---
 
