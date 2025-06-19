@@ -17,7 +17,7 @@ The pictures were extracted from the following paper:
 
 ---
 
-# Solution NMR Structure of PpdDj
+# Solution NMR Structure of PpdD
 
 ![](assets/img/pilus/1.png)
 
