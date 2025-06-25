@@ -1,15 +1,7 @@
 --- 
 layout: note-sidebar
-title: Portfolio 
+title: Let's Connect! 
 ---
-
-<video autoplay controls alt="self presentation of myself">
-<source src="assets/img/self_presentation.mp4" type="video/mp4">
-</video>
-
-<p class="let-s-connect">
-    Let's connect 
-</p>
 
 <ul class="socials">
     <li><a href="https://github.com/danesinoo">

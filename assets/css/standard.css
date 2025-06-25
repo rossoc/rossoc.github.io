@@ -171,7 +171,15 @@ h2 {
     margin-bottom: var(--heading2Size) / 2;
     font-size: var(--heading2Size);
     text-align: left;
+    display: flex;
+    align-items: center;
 }
+
+h2 svg {
+    height: calc(1.5 * var(--heading2Size));
+    margin-right: calc(var(--heading2Size) / 2);
+}
+
 
 h3 {
     line-height: var(--heading3Size);
