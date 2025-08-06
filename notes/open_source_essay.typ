@@ -6,7 +6,7 @@
     lastname: "Rosso",
     email: "carlorosso02@gmail.com",
     linkedin: "carlo-rosso",
-    homepage: "danesinoo.github.io",
+    homepage: "rossoc.github.io",
   ),
   entity: (
     target: "Christian Igel",

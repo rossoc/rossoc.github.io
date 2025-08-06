@@ -21,7 +21,7 @@ title: Projects
 
 ---
 
-## [Music vs Robot](https://github.com/danesinoo/music_vs_robot)
+## [Music vs Robot](https://github.com/rossoc/music_vs_robot)
 
 - Developed **Tower-defense-style game** insired by _Plants vs Zombies_.
 - Implemented in **C++14** with [Qt Framework](https://www.qt.io/product/framework), automated with [Makefile](https://makefiletutorial.com/)
@@ -30,7 +30,7 @@ title: Projects
 
 ---
 
-## [LogBook](https://github.com/danesinoo/danesinoo.github.io)
+## [LogBook](https://github.com/rossoc/rossoc.github.io)
 
 - **Automated blog** to convert **Markdown to HTML** with **Rust** and **GitHub Actions**.
 - **Open Source** project for **personal notes**, **project management**, and
