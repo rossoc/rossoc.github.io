@@ -46,3 +46,4 @@ The site builder is written in Rust, hence, to run the code you can use:
   site.
 - `cargo run -- -o <output_path>`: specify the folder to create the site in.
 - `cargo run -- --watch`: check for updates on `<source_path>`.
+- `cargo run -- --serve`: check for updates on `<source_path>`.

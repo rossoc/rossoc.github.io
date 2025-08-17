@@ -34,16 +34,19 @@ mod compile;
 mod error;
 mod file_walker;
 mod parser;
+mod serve;
 mod watcher;
 use crate::parser::make_site;
+use crate::serve::serve_directory;
 use crate::watcher::exec_on_event;
 use chrono::Local;
 use file_walker::copy_dir_all;
 use std::env::args;
 use std::path::PathBuf;
 
-fn main() -> Result<(), std::io::Error> {
-    let (target, dest, watch, _) = get_input();
+#[tokio::main]
+async fn main() -> Result<(), std::io::Error> {
+    let (target, dest, watch, serve) = get_input();
 
     copy_dir_all(&target, &dest).unwrap();
     match make_site(&target, &dest) {
@@ -58,6 +61,10 @@ fn main() -> Result<(), std::io::Error> {
             Err(e) => println!("error: {:?}", e),
         }
     };
+
+    if serve {
+        _ = serve_directory(&dest, 8080).await
+    }
 
     if watch {
         match exec_on_event(&target, &function) {
