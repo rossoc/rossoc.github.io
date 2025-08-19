@@ -1,7 +1,7 @@
 #import "@template/setting:0.2.0": *
 
 #show: doc => note(
-  title: [Workshop #linebreak() con Intelligenze Artificiali],
+  title: [GitHub and Proccesses Ideas],
   author: ("",),
   doc,
 )
@@ -22,7 +22,7 @@ This method is very effective because:
 - It keeps the main code stable.
 
 When conflicts do happen, here is a simple rule:
-👉 *The person who created the branch resolves the conflict.* 
+The person who created the branch resolves the conflict.
 If they are unsure, we solve it together. This keeps responsibility clear and teamwork strong.
 
 == Issue Tracking System
@@ -74,6 +74,26 @@ We can create a repository called `Notes`. In it:
 Everyone can manage their own branch freely. This gives personal space while
 keeping everything in one place.
 
+== Command Line Interface
+
+Here follows a list of useful commands:
+
++ `git clean -f` - Removes Unstaged UnTracked files
++ `git checkout .` - Removes Unstaged Tracked files
++ `git reset --hard` - Removes Staged Tracked and UnStaged Tracked
++ `git stash -u` - Removes all changes
+
+- `git stash pop` - Reapply the changes that were removed with `git stash`
+- `git commit --amend` - Adds the staged file into the last commit
+- `git rebase -i <commit-hash>` - Go back to previous commit, and choose which
+  commit to pick, drop, or edit.
+
+Many times it happens that you work on a different branch from the one you meant
+to be. When you realize that much, and so the following flow is very useful:
++ `git stash -u` — delete the changes from the current branch.
++ `git switch <correct-branch>` — switch to the branch you meant to be in.
++ `git stash pop` — reapplies the changes to the current branch.
+
 = Meetings
 
 We will meet with Jakob once a week, and we may have short team meetings during
@@ -97,8 +117,8 @@ Should we write a report after every meeting with Jakob? How often do we need
 formal reports?
 
 Actually, we might not need to write full reports every time. Instead, we can:
-- Use *Discussions* to record important decisions.
-- Use *Issues* to track who is doing what.
+- *Discussions* to record important decisions.
+- *Issues* to track who is doing what.
 
 This way, progress and decisions are always visible, up to date, and easy to
 find — without extra paperwork.

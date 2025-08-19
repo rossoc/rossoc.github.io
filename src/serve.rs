@@ -21,6 +21,7 @@ pub async fn serve_directory<P: AsRef<Path>>(
         {
             Ok(server) => {
                 println!("Server running at http://localhost:{}", port);
+                println!("Serving {}", path.as_ref().display());
                 println!("Press Ctrl+C to stop");
                 return server.run().await;
             }
