@@ -43,7 +43,6 @@ use chrono::Local;
 use file_walker::copy_dir_all;
 use std::env::args;
 use std::path::PathBuf;
-use tokio::signal;
 use tokio::task::spawn;
 
 #[tokio::main]
@@ -67,30 +66,28 @@ async fn main() -> Result<(), std::io::Error> {
         }
     };
 
-    let mut compile_handle = spawn(async move {});
+    let mut processes = vec![];
 
     if watch {
-        let _ = compile_handle.await;
-        compile_handle = spawn(async move {
+        processes.push(spawn(async move {
             match exec_on_event(&target, &compile_fn) {
                 Ok(()) => (),
                 Err(e) => eprintln!("{}", e),
             };
-        });
+        }));
     }
 
-    tokio::select! {
-        _ = async {
-            if serve {
-                serve_directory(&dest, 8080).await?;
-            }
-            compile_handle.await?;
-            Ok::<(), std::io::Error>(())
-        } => {},
-        _ = signal::ctrl_c() => {
-            println!("Received Ctrl+C, shutting down...");
-            std::process::exit(0)
-        }
+    if serve {
+        let addr = ("127.0.0.1", 8080);
+        let dest_cp = dest.to_owned();
+        processes.push(spawn(async move { serve_directory(addr, &dest_cp).await }));
+        println!("serving {} on {}:{}", &dest.display(), addr.0, addr.1);
+    }
+
+    let res = futures::future::join_all(processes).await;
+
+    for r in res {
+        println!("{:?}", r);
     }
 
     Ok(())
