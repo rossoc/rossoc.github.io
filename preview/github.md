@@ -12,7 +12,6 @@ continuous integration, and wikis for every project.
 ---
 
 # Version Control System
-## Theory
 
 - You can identify every enhancement with a commit.
 - More developers can contribute to the repository.
@@ -23,7 +22,6 @@ continuous integration, and wikis for every project.
 ---
 
 # Issue Tracking System
-## Theory
 
 - Every repository has the page `Issues`
 - `Issues` are defined by:
