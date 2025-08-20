@@ -44,6 +44,7 @@ use args::Args;
 use chrono::Local;
 use clap::Parser;
 use file_walker::copy_dir_all;
+use tokio::signal;
 use tokio::task::spawn;
 
 #[tokio::main]
@@ -67,34 +68,35 @@ async fn main() -> Result<(), std::io::Error> {
         }
     };
 
-    let mut processes = vec![];
-
-    if args.watch {
-        processes.push(spawn(async move {
-            match exec_on_event(&args.src, &compile_fn) {
-                Ok(()) => (),
-                Err(e) => eprintln!("{}", e),
-            };
-        }));
-    }
-
-    if args.serve {
-        let addr = ("127.0.0.1", 8080);
-        let dest_cp = args.out.to_owned();
-        processes.push(spawn(async move { serve_directory(addr, &dest_cp).await }));
-        println!(
-            "serving {} on http://{}:{}",
-            &args.out.display(),
-            addr.0,
-            addr.1
-        );
-    }
-
-    let res = futures::future::join_all(processes).await;
-
-    for r in res {
-        println!("{:?}", r);
-    }
+    tokio::select! {
+    _ = async {
+        let mut res = spawn(async {});
+        if args.watch {
+            res = spawn(async move {
+                match exec_on_event(&args.src, &compile_fn) {
+                    Ok(()) => (),
+                    Err(e) => eprintln!("{}", e),
+                };
+            });
+        }
+        if args.serve {
+            let addr = ("127.0.0.1", args.port);
+            let dest_cp = args.out.to_owned();
+            serve_directory(addr, &dest_cp).await;
+            println!(
+                "serving {} on http://{}:{}",
+                &args.out.display(),
+                addr.0,
+                addr.1
+            );
+        }
+        let _ = res.await;
+    } => {},
+        _ = signal::ctrl_c() => {
+            println!("Received Ctrl+C, shutting down...");
+            std::process::exit(0)
+        }
+    };
 
     Ok(())
 }
