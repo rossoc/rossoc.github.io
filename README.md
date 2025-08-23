@@ -1,5 +1,7 @@
 # Markdown to html
 
+[![Scripta workflow](https://github.com/rossoc/rossoc.github.io/actions/workflows/rust_builder.yml/badge.svg)](https://github.com/rossoc/rossoc.github.io/actions/workflows/rust_builder.yml)
+
 This program converts a directory of Markdown files to HTML files.
 The source directory is ignored, so you can have a `readme.md` as this one and 
 an `index.html`. It recurses in every sub-directory.
