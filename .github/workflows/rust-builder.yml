@@ -1,4 +1,4 @@
-name: Charta workflow
+name: Scripta workflow
 
 on:
   push:
@@ -21,17 +21,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Checkout Charta
+      - name: Checkout Scripta
         uses: actions/checkout@v4
         with:
-          repository: rossoc/Charta
-          path: ./charta
-      - name: Compile Charta
+          repository: rossoc/Scripta
+          path: ./scripta
+      - name: Compile Scripta
         run: |
-            cd charta && cargo build
+            cd scripta && cargo build
       - name: Build HTML
         run: |
-            ./charta/target/debug/Charta
+            ./scripta/target/debug/Scripta build
       - name: Show changes for debugging
         run: |
           git status
@@ -42,8 +42,6 @@ jobs:
           path: _site
       - name: Setup Pages
         uses: actions/configure-pages@v4
-        with:
-          build-output: _site
 
   deploy:
       environment:
