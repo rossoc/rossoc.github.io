@@ -1,10 +1,9 @@
-name: Rust builder
-
-run-name: Md to html conversion
+name: Charta workflow
 
 on:
   push:
     branches: ["main"]
+  
 
 permissions:
   contents: write
@@ -22,15 +21,25 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Checkout Charta
+        uses: actions/checkout@v4
+        with:
+          repository: rossoc/Charta
+          path: ./charta
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Build static HTML
-        run: cargo run
+        run: |
+            cd charta
+            cargo run -- -s ./.. -o ../_site
+      - name: Show changes for debugging
+        run: |
+          git status
+          git diff
       - name: Upload static files as artifact
-        id: deployment
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '_site'
+          path: ./_site
 
   deploy:
       environment:
@@ -42,3 +51,4 @@ jobs:
         - name: Deploy to GitHub Pages
           id: deployment
           uses: actions/deploy-pages@v4
+
