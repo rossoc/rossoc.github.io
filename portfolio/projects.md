@@ -30,7 +30,7 @@ title: Projects
 
 ---
 
-## [LogBook](https://github.com/rossoc/rossoc.github.io)
+## [Scripta](https://github.com/rossoc/Scripta)
 
 - **Automated blog** to convert **Markdown to HTML** with **Rust** and **GitHub Actions**.
 - **Open Source** project for **personal notes**, **project management**, and
