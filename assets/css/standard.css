@@ -1,7 +1,7 @@
 @media (prefers-color-scheme: light)[data-theme="light"] {
     :root {
-        --backgroundColor: #D5CCCD;
-        --backgroundColorHighlight: #EDE3E4;
+        --backgroundColor: #FFFFFF;
+        --backgroundColorHighlight: #f7f3f4;
         --textColor: #333;
         --oneColor: #691B25;
         --twoColor: #4c722f;
@@ -23,8 +23,8 @@
 }
 
 [data-theme="light"] {
-    --backgroundColor: #D5CCCD;
-    --backgroundColorHighlight: #EDE3E4;
+    --backgroundColor: #FFFFFF;
+    --backgroundColorHighlight: #f7f3f4;
     --textColor: #333;
     --oneColor: #691B25;
     --twoColor: #4c722f;
