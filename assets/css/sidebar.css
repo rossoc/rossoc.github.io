@@ -57,6 +57,7 @@ sidebar li a:visited:hover {
     white-space: nowrap;
     overflow-y: clip;
     text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 sidebar li a:hover, 
@@ -68,11 +69,11 @@ sidebar li a:visited:hover {
     body {
         grid-template-areas:
             "h"
-            "m" /* Main */
-            "s" /* Sidebar */
-            "f"; /* Footer */
-        grid-template-columns: 1fr; /* Single column layout on mobile */
-        grid-template-rows: auto 1fr auto; /* Sidebar, main, footer stacked vertically */
+            "m"
+            "s"
+            "f";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
     }
     sidebar {
         width: 100%;

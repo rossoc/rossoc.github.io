@@ -92,6 +92,10 @@
     body > * {
         max-width: 100vw;
     }
+
+    #navbar {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 701px) and (max-width: 900px) {
@@ -685,10 +689,6 @@ footer .main {
     flex-direction: column;
     padding: 0 var(--heading1Size);
     gap: var(--heading1Size);
-}
-
-footer .main p {
-    width: 100vw;
 }
 
 footer .main .content {
