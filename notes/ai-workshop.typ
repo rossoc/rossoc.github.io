@@ -67,7 +67,7 @@ ChatGPT è molto famosa, però la ricerca scientifica mostra che è il modello p
 prestate solo per quanto riguarda la lingua inglese.
 #link("https://qwen.ai/home")[Qwen] sembra essere il modello migliore per lingue
 non inglesi, inoltre non ha limiti di domande e non ha bisogno di sistemi di
-pagamento@Memerag.
+pagamento@memerag.
 
 == 🎨 E per il progetto finale?
 
@@ -90,21 +90,13 @@ risposte giuste o sbagliate. Vogliamo solo capire *cosa ne pensate*.
 === Domande per il dibattito:
 
 + Quanto usi l’IA ogni giorno?
-
 + Come l’hai usata in questo progetto?
-
 + Cosa sa fare meglio l’IA di una persona?
-
 + Cosa invece non sa fare bene?
-
 + Hai scoperto un “trucco” per usarla meglio?
-
 + Qual è il consiglio che daresti a un amico per usarla bene?
-
 + Usare l’IA per studiare è barare? O è solo un nuovo modo di imparare?
-
 + Ti fidi delle risposte dell'IA? Quando sì, quando no?
-
 + Cosa vorresti che l’IA imparasse a fare, ma oggi non sa fare bene?
 
 == ✅ Ricapitolando: cosa faremo
@@ -116,7 +108,8 @@ risposte giuste o sbagliate. Vogliamo solo capire *cosa ne pensate*.
 
 == 🚀 Pronti a iniziare?
 
-L’IA non sostituisce la vostra curiosità.
+Consiglio di guardare il video di Enkk@prompt_engineering.
+L’IA non sostituisce la vostra curiosità. 
 Ma se la usate bene, può *moltiplicarla*.  
 
 Buon lavoro! 💡

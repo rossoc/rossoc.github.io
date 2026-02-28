@@ -1,43 +1,38 @@
 #import "@template/setting:0.1.0": *
 
-#show: doc => content_settings(doc)
+#show: doc => content_settings("en", doc)
 
-= Engaging Self-Introduction
+Hi! I'm Carlo, a Computer Science Master's student at the University of Copenhagen (KU), specializing in Machine Learning and Quantization.
 
-== Opening Hook
-Hi! I’m Carlo Rosso—a passionate Computer Science Master’s student at KU,
-specializing in Machine Learning and Software Development. If you're looking for
-someone who thrives at the intersection of cutting-edge AI and efficient
-software solutions, you're in the right place!
+I build AI that is efficient, accessible, and meaningful. If you value scalable
+software design and the power of "small AI", we should talk!
 
-== 🔍 What Am I Looking For?
-I’m on the hunt for a role where I can bridge Machine Learning and Software
-Development—adapting open-source models to solve real business challenges. My
-goal? To design powerful pipelines and workflows that boost productivity
-and bring tangible value to your team.
+== 🎯 My Vision: Small AI, Big Impact
 
-== 🚀 Where Did My Journey Begin?
-I earned my Bachelor’s in Padua—a vibrant university city with over
-70,000 students. But I wanted more: a global perspective and a dynamic tech
-environment. That’s why I moved to Copenhagen to pursue my Master’s at KU,
-deepening my expertise in AI and software innovation.
+I believe the future of AI is about making it smarter and more accessible.
+I’m passionate about Open Source and "Small AI" because:
+- *Purpose-driven:* Building models with clear goals makes them safer.
+- *Efficient:* Optimized AI saves energy and reduces costs.
+- *Scalable:* True scalability means technology that everyone can use.
 
-== 💡My Most Inspiring Experience
+== 🌍 From Padua to Copenhagen
 
-One of my most exciting projects was interning with Professor Giovanni Da San
-Martino at the University of Padua. We researched AI-driven fact-checking and
-media propaganda detection. My work? Comparing Recurrent Neural Networks, Tree
-Kernel Methods, and Large Language Models for Sentiment Analysis—an incredible
-deep dive into NLP’s real-world impact.
+My journey started in Padua (Italy), where I earned my Bachelor’s.
+Driven by curiosity for innovation and people, I moved to Copenhagen.
+Here, I'm deepening my expertise in AI while embracing the dynamic Nordic tech
+scene.
 
-== How Do I Spend My Free Time?
+== 🔬 Research & Discovery
 
-When I’m not coding or reading ML papers, I’m building a startup to boost Open
-Source collaboration in Europe.
-I am also into sci-fi and fantasy books like The Foundation or Game Of
-Thrones. Always with great techno music in the background.
+I spent a summer as a Machine Learning Intern researching AI-driven fact-checking and propaganda detection.
+I explored the intersection of syntax and meaning, comparing Tree Kernel methods 
+with LLMs like BERT and RoBERTa.
 
-== Closing with a Call to Action:
+== ⚡ Beyond the Screen
 
-If you’re looking for a driven, curious, and solutions-focused ML/Software
-Engineer—let’s connect! I’d love to explore how I can contribute to your team.
+When I'm not "convincing the compiler" to share my vision (usually in Rust), I'm:
+- Building a startup to boost Open Source collaboration across Europe.
+- Diving into sci-fi and fantasy worlds like *The Foundation* or *Game of Thrones*.
+- Exploring human ideas through journaling and reading.
+
+All of this, of course, with a heavy dose of techno music in the background.
