@@ -1,4 +1,3 @@
----
 layout: list
-title: MoMos
+title: Projects
 ---
