@@ -21,17 +21,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Checkout Scripta
-        uses: actions/checkout@v4
-        with:
-          repository: rossoc/Scripta
-          path: ./scripta
-      - name: Compile Scripta
+      - name: Download Latest Scripta Binary
         run: |
-            cd scripta && cargo build
+          # Download the binary from the 'latest' alias
+          curl -L https://github.com/rossoc/Scripta/releases/latest/download/Scripta -o Scripta
+          chmod +x Scripta
       - name: Build HTML
         run: |
-            ./scripta/target/debug/Scripta build
+          ./Scripta build
       - name: Show changes for debugging
         run: |
           git status
