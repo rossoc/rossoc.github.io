@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: Download Latest Scripta Binary
         run: |
           # Download the binary from the 'latest' alias
@@ -34,11 +34,11 @@ jobs:
           git status
           git diff
       - name: Upload static files as artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: _site
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v6
 
   deploy:
       environment:
@@ -49,4 +49,4 @@ jobs:
       steps:
         - name: Deploy to GitHub Pages
           id: deployment
-          uses: actions/deploy-pages@v4
+          uses: actions/deploy-pages@v5
