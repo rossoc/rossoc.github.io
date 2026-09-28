@@ -47,6 +47,7 @@
   src: url('../font/HKGrotesk-Medium.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -54,6 +55,7 @@
   src: url('../font/HKGrotesk-MediumItalic.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -61,6 +63,7 @@
   src: url('../font/HKGrotesk-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -68,6 +71,7 @@
   src: url('../font/HKGrotesk-BoldItalic.ttf') format('truetype');
   font-weight: bold;
   font-style: italic;
+  font-display: swap;
 }
 
 :root {
@@ -81,7 +85,7 @@
 /* --------- BREAKPOINTS --------- */
 @media screen and (max-width: 700px) {
     :root {
-        --textSize: 0.7rem;
+        --textSize: 0.75rem;
         --heading1Size: 1.5rem;
         --heading2Size: 1.1rem;
         --heading3Size: 0.9rem;
