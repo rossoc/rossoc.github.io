@@ -12,3 +12,7 @@ Also:
 
 - `gg`: go to presentation's start.
 - `G`: go to presentation's end.
+
+---
+
+- [Introduzione a NEM](preview/nem.pdf)

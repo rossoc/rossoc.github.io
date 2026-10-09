@@ -5,13 +5,13 @@ title: Command Line to Remember
 
 ## GitHub
 
-1. `git clean -f` - Removes Unstaged UnTracked files
-1. `git checkout .` - Removes Unstaged Tracked files
-1. `git reset --hard` - Removes Staged Tracked and UnStaged Tracked
-1. `git stash -u` - Removes all changes
+1. `git clean -f` — Removes Unstaged UnTracked files
+1. `git checkout .` — Removes Unstaged Tracked files
+1. `git reset --hard` — Removes Staged Tracked and UnStaged Tracked
+1. `git stash -u` — Removes all changes
 
-- `git stash pop` - Reapply the changes that were removed with `git stash`
-- `git commit --amend` - Adds the staged file into the last commit
+- `git stash pop` — Reapply the changes that were removed with `git stash`
+- `git commit --amend` — Adds the staged file into the last commit
 
 ## UV
 
@@ -27,3 +27,10 @@ Checkout UV [here](https://docs.astral.sh/uv/)
 - `uv pip freeze` — list the dependencies in `requirements.txt` format
 - `uv pip sync pyproject.toml` — sync an environment with a pyproject.toml file
 - `uv run --with jupyter lab` — start a Jupyter server
+
+## Terraform
+
+- `terraform init` — downloads and installs the providers defined in the configuration
+- `terraform fmt` — formatting terraform files
+- `terrafrom validate` — something like the lsp
+- `terraform apply` — prints out the execution plan, asking for approval
