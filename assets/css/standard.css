@@ -734,6 +734,16 @@ footer .menu li a {
     padding: calc(var(--textSize));
 }
 
+footer .menu li a,
+footer .menu li a:visited {
+    color: var(--oneColor);
+}
+
+footer .menu li a:hover,
+footer .menu li a:visited:hover {
+    color: var(--oneColorHighlight);
+}
+
 footer .menu li a:before {
   content: '';
   position: absolute;
